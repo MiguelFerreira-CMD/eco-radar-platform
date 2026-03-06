@@ -27,11 +27,11 @@ A plataforma permite que qualquer pessoa possa:
 - CSS3
 - JavaScript
 - TypeScript
-- React.js
+- React(via Next.js)
 - React Router
 - Axios
 - TailwindCSS
-- Vite
+- Next.js
 
 ---
 
