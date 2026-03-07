@@ -143,13 +143,3 @@ Exemplos de pontuação:
 - [ ] Testes em produção
 
 ---
-
-# 🔮 Melhorias Futuras
-
-Possíveis evoluções do projeto:
-
-- 📡 Integração direta entre Arduino e plataforma
-- 📊 Dashboard de dados ambientais em tempo real
-- 📱 Aplicativo mobile
-- 🗺️ Mapa de denúncias ambientais
-- 🤝 Parcerias com órgãos ambientais
