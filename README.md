@@ -28,7 +28,7 @@ Esse dispositivo coleta **dados ambientais em tempo real** e ajuda a conscientiz
 
 ## Componentes
 
-- Sensor de qualidade do ar (ex: **MQ-135**)
+- Sensor de qualidade do ar
 - Arduino
 - Display ou LEDs indicadores
 - Alimentação via USB
