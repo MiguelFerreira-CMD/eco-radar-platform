@@ -78,18 +78,7 @@ O **back-end** é responsável por processar dados, gerenciar usuários e fornec
 * Controlar sistema de pontuação
 * Gerenciar conteúdo da plataforma
 * Servir dados para o front-end
-
-## Exemplos de endpoints
-
-```
-GET /api/noticias
-POST /api/denuncias
-GET /api/denuncias
-POST /api/auth/login
-POST /api/auth/register
-GET /api/user/profile
-```
-
+  
 ---
 
 # 🗄️ Banco de Dados
@@ -198,4 +187,4 @@ A arquitetura foi pensada para permitir futuras expansões, como:
 | Back-end       | Node.js + Express | API e lógica do sistema    |
 | Banco de Dados | MongoDB           | Armazenamento de dados     |
 | Hardware       | Arduino + MQ-135  | Medição da qualidade do ar |
-| Integrações    | APIs de notícias  | Informações ambientais     |
+| Integrações    | Dados Reais       | Informações ambientais     |
