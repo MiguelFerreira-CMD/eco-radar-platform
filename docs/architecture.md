@@ -78,18 +78,7 @@ O **back-end** é responsável por processar dados, gerenciar usuários e fornec
 * Controlar sistema de pontuação
 * Gerenciar conteúdo da plataforma
 * Servir dados para o front-end
-
-## Exemplos de endpoints
-
-```
-GET /api/noticias
-POST /api/denuncias
-GET /api/denuncias
-POST /api/auth/login
-POST /api/auth/register
-GET /api/user/profile
-```
-
+  
 ---
 
 # 🗄️ Banco de Dados
@@ -128,24 +117,6 @@ Exemplo de classificação:
 | 151+    | Perigosa  |
 
 Esse dispositivo será utilizado como **ferramenta de conscientização**, acompanhado de um **QR Code direcionando os usuários para o site EcoRadar**.
-
----
-
-# 🔗 Integrações Externas
-
-O sistema utiliza APIs externas para complementar os dados da plataforma.
-
-## APIs de notícias
-
-* NewsAPI
-* GNews
-
-Essas APIs fornecem:
-
-* notícias ambientais
-* imagens
-* fontes confiáveis
-* links para matérias completas
 
 ---
 
@@ -197,5 +168,6 @@ A arquitetura foi pensada para permitir futuras expansões, como:
 | Front-end      | Next.js + React   | Interface do usuário       |
 | Back-end       | Node.js + Express | API e lógica do sistema    |
 | Banco de Dados | MongoDB           | Armazenamento de dados     |
-| Hardware       | Arduino + MQ-135  | Medição da qualidade do ar |
-| Integrações    | APIs de notícias  | Informações ambientais     |
+| Hardware       | Arduino           | Medição da qualidade do ar |
+| Integrações    | Dados Reais       | Informações ambientais     |
+
