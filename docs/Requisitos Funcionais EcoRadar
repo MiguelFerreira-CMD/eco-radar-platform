@@ -1,0 +1,19 @@
+O EcoRadar deve seguir em seu site os requisitos funcionais (O que ele faz);
+
+1. Sessão: Perfil de Usuário e Cadastro
+
+- Cadastro
+Nome
+Sexo
+Idade
+Email
+
+Preferencias do Usuario
+Descarte de Lixo
+Tempo no Banho
+Se tem carro ou não ; Frequencia de uso
+
+- Geográfico
+Bairro
+Tipo de Atividade (Profissão)
+Se participa de alguma ONG
