@@ -56,12 +56,22 @@ Tecnologias:
 
 Funções do backend:
 
+<<<<<<< HEAD
 - autenticação de usuários
 - registro de denúncias
 - gerenciamento de status das denúncias
 - sistema de pontuação
 - controle administrativo
 
+=======
+* Criar APIs REST
+* Gerenciar autenticação de usuários
+* Armazenar denúncias ambientais
+* Controlar sistema de pontuação
+* Gerenciar conteúdo da plataforma
+* Servir dados para o front-end
+  
+>>>>>>> 9cc0ea7d45724ec35d96f499cab6ab6427458d5a
 ---
 
 ## Banco de Dados
@@ -151,6 +161,7 @@ Esse ranking pode ser exibido em uma área lateral da interface do site.
 
 ## Integração com Arduino
 
+<<<<<<< HEAD
 O projeto também inclui um protótipo com **Arduino** responsável por medir a qualidade do ar.
 
 Os dados coletados pelo sensor são exibidos em um dispositivo físico junto a um **QR Code**.
@@ -170,3 +181,12 @@ Backend
 Responsável pela lógica da aplicação e comunicação com o banco de dados.
 
 Essa separação melhora a organização do projeto e facilita a manutenção e evolução do sistema.
+=======
+| Camada         | Tecnologia        | Função                     |
+| -------------- | ----------------- | -------------------------- |
+| Front-end      | Next.js + React   | Interface do usuário       |
+| Back-end       | Node.js + Express | API e lógica do sistema    |
+| Banco de Dados | MongoDB           | Armazenamento de dados     |
+| Hardware       | Arduino + MQ-135  | Medição da qualidade do ar |
+| Integrações    | Dados Reais       | Informações ambientais     |
+>>>>>>> 9cc0ea7d45724ec35d96f499cab6ab6427458d5a

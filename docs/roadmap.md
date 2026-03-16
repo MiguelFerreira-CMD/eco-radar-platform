@@ -59,6 +59,7 @@ Funcionalidades planejadas:
 
 ---
 
+<<<<<<< HEAD
 # Futuras Melhorias
 
 Possíveis evoluções do projeto:
@@ -68,3 +69,100 @@ Possíveis evoluções do projeto:
 - aplicativo mobile
 - dashboard com dados ambientais
 - integração com órgãos ambientais
+=======
+# 📰 Fase 5 — Sistema de Notícias Ambientais
+
+- [ ] Integração com API de notícias
+- [ ] Implementação do feed de notícias
+- [ ] Exibição de imagem, título e fonte
+- [ ] Link para notícia completa
+
+APIs previstas:
+
+- NewsAPI
+- GNews
+
+---
+
+# 🧮 Fase 6 — Calculadora de Impacto de CO₂
+
+- [ ] Criação do formulário da calculadora
+- [ ] Implementação das regras de cálculo
+- [ ] Exibição do resultado de emissão de CO₂
+- [ ] Gráfico visual de impacto ambiental
+- [ ] Sugestões de redução de impacto
+
+---
+
+# 🚨 Fase 7 — Sistema de Denúncias Ambientais
+
+- [ ] Criação do formulário de denúncia
+- [ ] Upload de imagem
+- [ ] Registro da localização
+- [ ] Armazenamento no banco de dados
+- [ ] Listagem de denúncias
+
+Categorias possíveis:
+
+- lixo irregular
+- poluição
+- queimadas
+- desmatamento
+
+---
+
+# 🔐 Fase 8 — Sistema de Usuários
+
+- [ ] Cadastro de usuários
+- [ ] Login
+- [ ] Autenticação com JWT
+- [ ] Perfil do usuário
+- [ ] Histórico de denúncias
+
+---
+
+# 🏆 Fase 9 — Sistema de Gamificação
+
+- [ ] Sistema de pontuação
+- [ ] Registro de atividades
+- [ ] Ranking de usuários
+- [ ] Exibição de pontos no perfil
+
+Exemplos de pontuação:
+
+- +10 pontos por denúncia
+- +5 pontos por usar calculadora
+- +3 pontos por interação com conteúdo
+
+---
+
+# 📊 Fase 10 — Painel Administrativo
+
+- [ ] Login de administrador
+- [ ] Gerenciamento de denúncias
+- [ ] Alteração de status
+- [ ] Moderação de conteúdo
+- [ ] Relatórios de uso da plataforma
+
+---
+
+# 🌐 Fase 11 — Integração e Testes
+
+- [ ] Testes de funcionalidades
+- [ ] Ajustes de interface
+- [ ] Correção de bugs
+- [ ] Testes de responsividade
+- [ ] Otimização de performance
+
+---
+
+# 🚀 Fase 12 — Deploy do Projeto
+
+- [ ] Deploy do Front-end
+- [ ] Deploy da API
+- [ ] Configuração do banco de dados em nuvem
+- [ ] Configuração do domínio
+- [ ] Testes em produção
+
+---
+>>>>>>> 9cc0ea7d45724ec35d96f499cab6ab6427458d5a
