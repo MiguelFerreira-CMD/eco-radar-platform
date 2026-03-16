@@ -1,201 +1,172 @@
-# 🏗️ Architecture — EcoRadar
+# Arquitetura do Sistema - EcoRadar
 
-Este documento descreve a **arquitetura do sistema EcoRadar**, explicando como os diferentes componentes da plataforma se conectam para oferecer funcionalidades de conscientização ambiental, monitoramento e participação comunitária.
+## Visão Geral
 
----
+O **EcoRadar** é uma plataforma web criada para permitir que cidadãos registrem e acompanhem denúncias ambientais em suas regiões, promovendo conscientização e participação da comunidade na preservação do meio ambiente.
 
-# 🌐 Visão Geral da Arquitetura
-
-O EcoRadar utiliza uma **arquitetura web baseada em cliente-servidor**, combinando tecnologias modernas de front-end, back-end, banco de dados e um sistema físico de monitoramento ambiental.
-
-Fluxo geral do sistema:
-
-```
-Usuário
-   ↓
-Front-end (Next.js)
-   ↓
-API (Node.js + Express)
-   ↓
-Banco de Dados (MongoDB)
-```
-
-Além disso, o projeto inclui um **dispositivo físico com Arduino** responsável por demonstrar a medição da qualidade do ar.
+A aplicação segue uma arquitetura **cliente-servidor**, onde o frontend é responsável pela interface do usuário e o backend gerencia a lógica da aplicação, autenticação, armazenamento de dados e processamento das denúncias.
 
 ---
 
-# 🖥️ Front-end
+# Estrutura Geral da Arquitetura
 
-O **front-end** é responsável pela interface do usuário e pela interação com a API.
+A comunicação do sistema ocorre da seguinte forma:
 
-## Tecnologias
+Usuário → Frontend → API Backend → Banco de Dados
 
-* HTML5
-* CSS3
-* JavaScript
-* TypeScript
-* React (via Next.js)
-* TailwindCSS
-* Axios
-
-## Responsabilidades
-
-* Renderizar as páginas da plataforma
-* Exibir dados recebidos da API
-* Enviar informações para o back-end
-* Gerenciar navegação entre páginas
-* Consumir APIs externas de notícias
-
-## Principais páginas
-
-* Página inicial
-* Qualidade do ar
-* Dicas sustentáveis
-* Notícias ambientais
-* Calculadora de CO₂
-* Sistema de denúncias
-* Área administrativa
+1. O usuário interage com a interface do site.
+2. O frontend envia requisições para a API do backend.
+3. O backend processa os dados e executa regras de negócio.
+4. As informações são armazenadas no banco de dados.
+5. A API retorna a resposta para o frontend.
 
 ---
 
-# ⚙️ Back-end
+# Tecnologias Utilizadas
 
-O **back-end** é responsável por processar dados, gerenciar usuários e fornecer APIs para o front-end.
+## Frontend
 
-## Tecnologias
+Responsável pela interface e experiência do usuário.
 
-* Node.js
-* Express.js
-* JWT (autenticação)
-* Multer (upload de imagens)
-* Mongoose (ODM)
+Tecnologias:
 
-## Responsabilidades
+- HTML5
+- CSS3
+- JavaScript
+- TailwindCSS
 
-* Criar APIs REST
-* Gerenciar autenticação de usuários
-* Armazenar denúncias ambientais
-* Controlar sistema de pontuação
-* Gerenciar conteúdo da plataforma
-* Servir dados para o front-end
+O frontend apresenta:
 
-## Exemplos de endpoints
-
-```
-GET /api/noticias
-POST /api/denuncias
-GET /api/denuncias
-POST /api/auth/login
-POST /api/auth/register
-GET /api/user/profile
-```
+- layout moderno e responsivo
+- páginas informativas sobre preservação ambiental
+- formulário de denúncias
+- calculadora de emissão de CO₂
+- ranking de usuários
 
 ---
 
-# 🗄️ Banco de Dados
+## Backend
 
-O projeto utiliza um banco de dados **NoSQL** baseado em documentos.
+Responsável pela lógica da aplicação e comunicação com o banco de dados.
 
-## Tecnologia
+Tecnologias:
 
-* MongoDB
-* MongoDB Atlas
+- Node.js
+- Express.js
 
----
+Funções do backend:
 
-# 🔬 Sistema de Monitoramento Ambiental
-
-O EcoRadar também inclui um **dispositivo físico para medição da qualidade do ar** utilizando Arduino.
-
-## Componentes
-
-* Arduino
-* Sensor MQ-135
-* LEDs ou Display
-* Alimentação via USB
-
-## Funcionamento
-
-O sensor detecta gases e partículas presentes no ar e classifica a qualidade ambiental.
-
-Exemplo de classificação:
-
-| Índice  | Qualidade |
-| ------- | --------- |
-| 0–50    | Boa       |
-| 51–100  | Moderada  |
-| 101–150 | Ruim      |
-| 151+    | Perigosa  |
-
-Esse dispositivo será utilizado como **ferramenta de conscientização**, acompanhado de um **QR Code direcionando os usuários para o site EcoRadar**.
+- autenticação de usuários
+- registro de denúncias
+- gerenciamento de status das denúncias
+- sistema de pontuação
+- controle administrativo
 
 ---
 
-# 🔗 Integrações Externas
+## Banco de Dados
 
-O sistema utiliza APIs externas para complementar os dados da plataforma.
+Tecnologia utilizada:
 
-## APIs de notícias
+MongoDB
 
-* NewsAPI
-* GNews
+O banco de dados é responsável por armazenar:
 
-Essas APIs fornecem:
+- usuários
+- denúncias ambientais
+- status das denúncias
+- pontuação dos usuários
 
-* notícias ambientais
-* imagens
-* fontes confiáveis
-* links para matérias completas
-
----
-
-# 📡 Comunicação entre Sistemas
-
-A comunicação entre os componentes do sistema ocorre da seguinte forma:
-
-```
-Usuário
-   ↓
-Interface Web (Next.js)
-   ↓
-Requisições HTTP (Axios)
-   ↓
-API REST (Node.js / Express)
-   ↓
-Banco de Dados (MongoDB)
-```
+A modelagem dos dados é feita utilizando **Mongoose**.
 
 ---
 
-# 🔐 Segurança
+# Funcionalidades do Sistema
 
-O sistema utiliza alguns mecanismos básicos de segurança:
+## Sistema de Login
 
-* Autenticação via JWT
-* Proteção de rotas privadas
-* Hash de senhas
-* Validação de dados enviados pelo usuário
-* Controle de acesso para administradores
+Usuários podem:
 
----
+- criar conta
+- realizar login
+- acessar funcionalidades da plataforma
 
-# 📊 Escalabilidade
-
-A arquitetura foi pensada para permitir futuras expansões, como:
-
-* integração direta do Arduino com a plataforma
-* dashboard de dados ambientais em tempo real
-* mapas interativos de denúncias
-* aplicativo mobile
+A autenticação garante que apenas usuários registrados possam enviar denúncias.
 
 ---
 
-# 🧠 Resumo da Arquitetura
+## Sistema de Denúncias Ambientais
 
-| Camada         | Tecnologia        | Função                     |
-| -------------- | ----------------- | -------------------------- |
-| Front-end      | Next.js + React   | Interface do usuário       |
-| Back-end       | Node.js + Express | API e lógica do sistema    |
-| Banco de Dados | MongoDB           | Armazenamento de dados     |
-| Hardware       | Arduino + MQ-135  | Medição da qualidade do ar |
-| Integrações    | APIs de notícias  | Informações ambientais     |
+Os usuários podem registrar denúncias sobre problemas ambientais como:
+
+- rios poluídos
+- esgoto irregular
+- descarte de lixo
+- outros tipos de poluição
+
+Cada denúncia pode conter:
+
+- título
+- descrição
+- foto da ocorrência
+- data do registro
+- status da análise
+
+As imagens enviadas **não são exibidas publicamente no site**.
+
+Elas ficam disponíveis apenas para **administradores no sistema interno**, garantindo controle e moderação das denúncias.
+
+---
+
+## Status das Denúncias
+
+Cada denúncia possui um status que indica seu estado de análise:
+
+- Em análise
+- Verificada
+
+Isso permite que usuários acompanhem o andamento das denúncias realizadas.
+
+---
+
+## Calculadora de Emissão de CO₂
+
+O sistema possui uma ferramenta interativa que permite aos usuários calcular uma estimativa de emissão de dióxido de carbono baseada em hábitos cotidianos.
+
+Essa funcionalidade tem como objetivo promover **educação ambiental e conscientização sobre impacto climático**.
+
+---
+
+## Sistema de Pontuação e Ranking
+
+Para incentivar a participação da comunidade, o EcoRadar possui um sistema de pontuação.
+
+Usuários recebem pontos ao realizar denúncias.
+
+Um **ranking de usuários** é exibido no site, mostrando quem mais contribuiu com denúncias ambientais.
+
+Esse ranking pode ser exibido em uma área lateral da interface do site.
+
+---
+
+## Integração com Arduino
+
+O projeto também inclui um protótipo com **Arduino** responsável por medir a qualidade do ar.
+
+Os dados coletados pelo sensor são exibidos em um dispositivo físico junto a um **QR Code**.
+
+Esse QR Code direciona usuários para o site do EcoRadar, incentivando o acesso à plataforma e ampliando a conscientização ambiental.
+
+---
+
+# Estrutura do Projeto
+
+O projeto é dividido em duas partes principais:
+
+Frontend  
+Responsável pela interface do usuário.
+
+Backend  
+Responsável pela lógica da aplicação e comunicação com o banco de dados.
+
+Essa separação melhora a organização do projeto e facilita a manutenção e evolução do sistema.

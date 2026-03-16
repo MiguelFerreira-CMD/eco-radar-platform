@@ -1,155 +1,70 @@
-# 🗺️ Roadmap — EcoRadar
+# Roadmap - EcoRadar
 
-Este documento apresenta o **planejamento de desenvolvimento do EcoRadar**, organizado por etapas de implementação do projeto.
-
----
-
-# 🚀 Fase 1 — Planejamento do Projeto
-
-- [x] Definição da ideia do projeto
-- [x] Definição das funcionalidades principais
-- [x] Escolha da stack tecnológica
-- [x] Estrutura inicial do repositório
-- [x] Criação do README.md
+Este documento apresenta o planejamento de evolução do projeto **EcoRadar**, descrevendo funcionalidades já planejadas e futuras melhorias da plataforma.
 
 ---
 
-# 🖥️ Fase 2 — Estrutura Base da Plataforma
+# Versão 1.0 - MVP (Produto Inicial)
 
-- [ ] Configuração do projeto com Next.js
-- [ ] Configuração do TailwindCSS
-- [ ] Estrutura inicial de pastas
-- [ ] Criação do layout principal
-- [ ] Navbar e Footer
-- [ ] Página inicial do projeto
+Objetivo: criar uma versão funcional da plataforma.
 
----
+Funcionalidades:
 
-# 🌫️ Fase 3 — Sistema de Monitoramento do Ar
-
-- [ ] Montagem do circuito com Arduino
-- [ ] Integração do sensor MQ-135
-- [ ] Leitura dos dados do sensor
-- [ ] Classificação da qualidade do ar
-- [ ] Exibição dos dados em display ou LEDs
-- [ ] Criação de conteúdo educativo sobre qualidade do ar no site
+- sistema de cadastro de usuários
+- sistema de login
+- registro de denúncias ambientais
+- envio de fotos nas denúncias
+- armazenamento das denúncias no banco de dados
+- exibição do status da denúncia (em análise ou verificada)
+- interface inicial do site
+- páginas informativas sobre conscientização ambiental
 
 ---
 
-# 🌱 Fase 4 — Área Educativa
+# Versão 1.1
 
-Implementação da área com conteúdo sustentável.
+Melhorias na experiência do usuário e engajamento da comunidade.
 
-- [ ] Página de dicas sustentáveis
-- [ ] Conteúdos sobre reciclagem
-- [ ] Conteúdos sobre economia de água
-- [ ] Conteúdos sobre energia renovável
-- [ ] Conteúdos sobre transporte sustentável
+Funcionalidades planejadas:
 
----
-
-# 📰 Fase 5 — Sistema de Notícias Ambientais
-
-- [ ] Integração com API de notícias
-- [ ] Implementação do feed de notícias
-- [ ] Exibição de imagem, título e fonte
-- [ ] Link para notícia completa
-
-APIs previstas:
-
-- NewsAPI
-- GNews
+- sistema de pontuação para usuários
+- ranking de usuários que mais registram denúncias
+- melhorias de interface e design do site
+- layout mais moderno e responsivo
 
 ---
 
-# 🧮 Fase 6 — Calculadora de Impacto de CO₂
+# Versão 1.2
 
-- [ ] Criação do formulário da calculadora
-- [ ] Implementação das regras de cálculo
-- [ ] Exibição do resultado de emissão de CO₂
-- [ ] Gráfico visual de impacto ambiental
-- [ ] Sugestões de redução de impacto
+Expansão das funcionalidades educativas e interativas.
 
----
+Funcionalidades planejadas:
 
-# 🚨 Fase 7 — Sistema de Denúncias Ambientais
-
-- [ ] Criação do formulário de denúncia
-- [ ] Upload de imagem
-- [ ] Registro da localização
-- [ ] Armazenamento no banco de dados
-- [ ] Listagem de denúncias
-
-Categorias possíveis:
-
-- lixo irregular
-- poluição
-- queimadas
-- desmatamento
+- calculadora de emissão de CO₂
+- conteúdo educativo sobre redução de poluição
+- melhorias na navegação do site
+- otimização do sistema de denúncias
 
 ---
 
-# 🔐 Fase 8 — Sistema de Usuários
+# Versão 1.3
 
-- [ ] Cadastro de usuários
-- [ ] Login
-- [ ] Autenticação com JWT
-- [ ] Perfil do usuário
-- [ ] Histórico de denúncias
+Integração com hardware e expansão do projeto.
 
----
+Funcionalidades planejadas:
 
-# 🏆 Fase 9 — Sistema de Gamificação
-
-- [ ] Sistema de pontuação
-- [ ] Registro de atividades
-- [ ] Ranking de usuários
-- [ ] Exibição de pontos no perfil
-
-Exemplos de pontuação:
-
-- +10 pontos por denúncia
-- +5 pontos por usar calculadora
-- +3 pontos por interação com conteúdo
+- integração com dispositivo Arduino
+- exibição de dados de qualidade do ar
+- QR Code para acesso rápido ao site
 
 ---
 
-# 📊 Fase 10 — Painel Administrativo
-
-- [ ] Login de administrador
-- [ ] Gerenciamento de denúncias
-- [ ] Alteração de status
-- [ ] Moderação de conteúdo
-- [ ] Relatórios de uso da plataforma
-
----
-
-# 🌐 Fase 11 — Integração e Testes
-
-- [ ] Testes de funcionalidades
-- [ ] Ajustes de interface
-- [ ] Correção de bugs
-- [ ] Testes de responsividade
-- [ ] Otimização de performance
-
----
-
-# 🚀 Fase 12 — Deploy do Projeto
-
-- [ ] Deploy do Front-end
-- [ ] Deploy da API
-- [ ] Configuração do banco de dados em nuvem
-- [ ] Configuração do domínio
-- [ ] Testes em produção
-
----
-
-# 🔮 Melhorias Futuras
+# Futuras Melhorias
 
 Possíveis evoluções do projeto:
 
-- 📡 Integração direta entre Arduino e plataforma
-- 📊 Dashboard de dados ambientais em tempo real
-- 📱 Aplicativo mobile
-- 🗺️ Mapa de denúncias ambientais
-- 🤝 Parcerias com órgãos ambientais
+- mapa interativo de denúncias
+- sistema de notificações
+- aplicativo mobile
+- dashboard com dados ambientais
+- integração com órgãos ambientais

@@ -1,33 +1,119 @@
 # Contribuindo com o EcoRadar
 
-Obrigado por contribuir com o EcoRadar 🌱
+Obrigado pelo seu interesse em contribuir com o **EcoRadar**.
 
-## Como contribuir
+O EcoRadar é uma plataforma voltada para a conscientização ambiental e para o registro de problemas ambientais pela população, utilizando tecnologia para incentivar a participação cidadã.
 
-1. Faça um fork do repositório
-2. Crie uma branch para sua feature
+Contribuições são muito bem-vindas e ajudam a melhorar o projeto.
 
-git checkout -b feature/nome-da-feature
+---
 
-3. Faça commit das mudanças
+# Como Contribuir
 
-git commit -m "feat: descrição da alteração"
+## 1. Faça um Fork do Repositório
 
-4. Envie para o GitHub
+Primeiro, crie um fork deste repositório.
 
-git push origin feature/nome-da-feature
+Depois clone o projeto para sua máquina:
 
-5. Abra um Pull Request
+git clone https://github.com/seu-usuario/ecoradar.git
 
-## Padrão de commits
+---
 
-feat: nova funcionalidade  
-fix: correção de bug  
-docs: mudanças na documentação  
-style: mudanças visuais  
+## 2. Crie uma Nova Branch
 
-## Regras do projeto
+Sempre crie uma nova branch antes de começar a trabalhar.
 
-- Código organizado
-- Comentários quando necessário
-- Seguir a estrutura do projeto
+Exemplo:
+
+git checkout -b feature/nova-funcionalidade
+
+Sugestões de nomes de branch:
+
+feature/nome-da-funcionalidade  
+fix/correcao-de-bug  
+improvement/melhoria  
+
+---
+
+## 3. Faça Suas Alterações
+
+Implemente sua funcionalidade ou correção seguindo os padrões do projeto.
+
+Procure manter o código:
+
+- organizado
+- legível
+- bem estruturado
+
+Sempre que possível, adicione comentários para facilitar a compreensão.
+
+---
+
+## 4. Faça o Commit das Alterações
+
+Utilize mensagens de commit claras e descritivas.
+
+Exemplos:
+
+feat: adiciona calculadora de CO2  
+fix: corrige erro no sistema de login  
+refactor: melhora organização da API  
+
+---
+
+## 5. Envie para seu Repositório
+
+git push origin feature/nova-funcionalidade
+
+---
+
+## 6. Abra um Pull Request
+
+Depois disso, abra um **Pull Request** para o repositório principal.
+
+O Pull Request deve conter:
+
+- descrição clara da alteração
+- motivo da mudança
+- prints ou exemplos (se houver alteração visual)
+
+---
+
+# Boas Práticas de Código
+
+Ao contribuir com o projeto, procure seguir estas práticas:
+
+- manter o código simples e organizado
+- utilizar nomes de variáveis claros
+- respeitar a estrutura de pastas do projeto
+- evitar enviar arquivos sensíveis ou dados privados
+
+---
+
+# Reportando Problemas
+
+Caso encontre um erro ou queira sugerir uma melhoria, abra uma **Issue** no repositório com:
+
+- descrição clara do problema
+- passos para reproduzir (se for um bug)
+- comportamento esperado
+- prints ou exemplos (se necessário)
+
+---
+
+# Comunidade
+
+Queremos construir uma comunidade colaborativa e respeitosa em torno do EcoRadar.
+
+Todos os colaboradores devem:
+
+- manter o respeito entre os membros
+- colaborar de forma construtiva
+- manter comunicação clara
+
+---
+
+# Agradecimento
+
+Agradecemos sua contribuição para melhorar o **EcoRadar** e ajudar a promover a conscientização ambiental através da tecnologia.

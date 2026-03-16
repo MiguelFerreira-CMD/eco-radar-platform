@@ -1,224 +1,252 @@
-# 🌍 EcoRadar
+# 🌱 EcoRadar
 
-Plataforma web de **conscientização ambiental, monitoramento e ação comunitária**, onde usuários podem aprender práticas sustentáveis, acompanhar notícias ambientais, calcular seu impacto de CO₂, denunciar problemas ambientais e visualizar dados de **qualidade do ar coletados por sensores**.
+**EcoRadar** é uma plataforma digital criada para permitir que cidadãos identifiquem, registrem e acompanhem problemas ambientais em suas cidades.
 
-O **EcoRadar** conecta **tecnologia, dados ambientais e participação da comunidade**, incentivando ações em defesa do meio ambiente.
+A plataforma conecta tecnologia, participação social e conscientização ambiental para ajudar na identificação de problemas como poluição de rios, descarte irregular de lixo, esgoto a céu aberto e outros impactos ambientais.
 
----
-
-# 🎯 Objetivo
-
-O EcoRadar busca **educar, informar e engajar** a sociedade na proteção ambiental utilizando tecnologia.
-
-A plataforma permite que qualquer pessoa possa:
-
-- 🌱 Aprender hábitos sustentáveis  
-- 📰 Acompanhar notícias ambientais  
-- 🧮 Calcular seu impacto de carbono  
-- 🚨 Denunciar problemas ambientais  
-- 🌫️ Visualizar dados de qualidade do ar coletados por sensores  
+O objetivo é transformar cidadãos em agentes ativos na proteção do meio ambiente através de tecnologia acessível.
 
 ---
 
-# 🔬 Sistema de Monitoramento Ambiental (Arduino)
+# 🚀 Visão do Projeto
 
-Além da plataforma web, o projeto conta com um sistema físico de **monitoramento da qualidade do ar utilizando Arduino**.
+O EcoRadar busca criar um sistema onde qualquer pessoa possa contribuir com a preservação ambiental reportando problemas em sua região.
 
-Esse dispositivo coleta **dados ambientais em tempo real** e ajuda a conscientizar a população sobre a poluição do ar.
+Através da plataforma, usuários podem registrar denúncias ambientais, acompanhar o status da análise dessas denúncias e contribuir para um sistema de monitoramento ambiental coletivo.
 
-## Componentes
-
-- Sensor de qualidade do ar
-- Arduino
-- Display ou LEDs indicadores
-- Alimentação via USB
-
-## Funcionamento
-
-O sistema realiza a **medição de gases e poluentes presentes no ar** e classifica a qualidade do ambiente.
-
-### Exemplo de classificação
-
-| Índice | Qualidade do Ar |
-|------|------|
-| 0 – 50 | 🟢 Boa |
-| 51 – 100 | 🟡 Moderada |
-| 101 – 150 | 🟠 Ruim |
-| 151+ | 🔴 Perigosa |
+O projeto também promove educação ambiental através de ferramentas interativas e conteúdos informativos.
 
 ---
 
-# 📲 Integração com a Plataforma
+# 🌍 Problema
 
-O dispositivo Arduino será acompanhado de um **panfleto com QR Code**, incentivando as pessoas a acessarem o site para entender melhor os dados ambientais.
+Em muitas cidades, problemas ambientais como:
 
-**Mensagem exemplo:**
+- poluição de rios
+- descarte irregular de lixo
+- esgoto a céu aberto
+- poluição do ar
 
-> 🌫️ Este dispositivo mede a qualidade do ar do ambiente.  
->  
-> Quer entender o que esses dados significam e como reduzir a poluição?  
->  
-> **Acesse o EcoRadar para mais informações e dicas ambientais.**
+demoram a ser identificados ou reportados aos órgãos responsáveis.
 
-O **QR Code leva diretamente para o site do projeto.**
-
----
-
-# 🧩 Stack Tecnológica
-
-## Front-end
-
-- HTML5  
-- CSS3  
-- JavaScript  
-- TypeScript  
-- React (via Next.js)  
-- React Router  
-- Axios  
-- TailwindCSS  
+A falta de canais simples para denúncia e conscientização reduz a participação da população na preservação ambiental.
 
 ---
 
-## Back-end
+# 💡 Solução
 
-- Node.js  
-- Express.js  
-- JWT (autenticação)  
-- Multer (upload de imagens)  
-- Mongoose  
+O **EcoRadar** oferece uma plataforma digital onde cidadãos podem:
+
+- registrar denúncias ambientais com fotos
+- acompanhar o status da análise dessas denúncias
+- visualizar informações educativas sobre sustentabilidade
+- calcular sua emissão aproximada de CO₂
+- participar de um ranking de contribuição ambiental
+
+A plataforma transforma participação ambiental em uma experiência interativa e acessível.
+
+---
+
+# ✨ Principais Funcionalidades
+
+## 👤 Sistema de Usuários
+
+- Cadastro de usuários
+- Login seguro
+- Autenticação baseada em token
+- Perfil de usuário
+
+---
+
+## 🚨 Sistema de Denúncias Ambientais
+
+Usuários podem registrar denúncias contendo:
+
+- título da denúncia
+- descrição do problema
+- imagem da ocorrência
+- localização
+- data do registro
+
+Cada denúncia passa por um processo de análise e recebe um status:
+
+- **Em análise**
+- **Verificada**
+- **Rejeitada**
+
+As imagens enviadas ficam disponíveis apenas no painel administrativo.
+
+---
+
+## 🛠 Painel Administrativo
+
+Administradores podem:
+
+- visualizar denúncias enviadas
+- analisar evidências
+- verificar imagens enviadas
+- aprovar ou rejeitar denúncias
+- atualizar o status das ocorrências
+
+---
+
+## 🧮 Calculadora de Emissão de CO₂
+
+Ferramenta educativa que permite aos usuários estimar sua emissão de carbono com base em hábitos cotidianos como:
+
+- uso de transporte
+- consumo energético
+- estilo de vida
+
+A calculadora também fornece recomendações para redução do impacto ambiental.
+
+---
+
+## 🏆 Sistema de Pontuação e Ranking
+
+Para incentivar a participação da comunidade, o EcoRadar utiliza um sistema de gamificação.
+
+Usuários recebem pontos por:
+
+- registrar denúncias
+- contribuir com registros válidos
+
+O sistema exibe um ranking com os usuários mais ativos da plataforma.
+
+---
+
+## 📡 Monitoramento de Qualidade do Ar
+
+O projeto também integra um protótipo com **Arduino**, responsável por medir dados ambientais como qualidade do ar.
+
+Os dados são exibidos fisicamente junto a um **QR Code**, que direciona usuários para a plataforma EcoRadar.
+
+Essa integração demonstra como tecnologia embarcada pode apoiar iniciativas de monitoramento ambiental.
+
+---
+
+# 🧱 Tecnologias Utilizadas
+
+## Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+- TailwindCSS
+
+---
+
+## Backend
+
+- Node.js
+- Express.js
 
 ---
 
 ## Banco de Dados
 
-- MongoDB  
-- MongoDB Atlas  
+- MongoDB
+- Mongoose
 
 ---
 
-# ⚙️ Funcionalidades
+## Outras Ferramentas
 
-## 🏠 Página Inicial
-
-Apresentação do projeto e acesso rápido às funcionalidades.
-
-- Missão da plataforma  
-- Importância da sustentabilidade  
-- Acesso às principais áreas do site  
+- JWT para autenticação
+- Multer para upload de imagens
+- dotenv para variáveis de ambiente
 
 ---
 
-## 🌫️ Qualidade do Ar
+# 📁 Estrutura do Projeto
 
-Área dedicada ao **monitoramento ambiental**.
+ecoradar
+│
+├── backend
+├── frontend
+├── uploads
+├── docs
+├── arduino
+├── package.json
+├── .env
+├── .gitignore
+├── LICENSE
+├── CONTRINUTING.md
+└── README.md
 
-Conteúdos exibidos:
-
-- Explicação sobre qualidade do ar  
-- Níveis de poluição  
-- Impacto na saúde  
-- Funcionamento do sensor utilizado no projeto  
-- Dados coletados pelo sistema Arduino (educativos ou simulados)
-
----
-
-## 🌱 Dicas Sustentáveis
-
-Área educativa com práticas ecológicas.
-
-Exemplos:
-
-- Economia de água  
-- Reciclagem  
-- Energia renovável  
-- Transporte sustentável  
+O projeto está organizado seguindo boas práticas de separação entre **frontend**, **backend** e **armazenamento de arquivos**.
 
 ---
 
-## 📰 Notícias Ambientais
+# ⚙️ Instalação
 
-Feed automático de notícias ambientais utilizando **APIs externas**.
+## 1. Clonar o repositório
 
-### APIs possíveis
-
-- NewsAPI  
-- GNews  
-
-Cada notícia exibe:
-
-- Título  
-- Imagem  
-- Fonte  
-- Link para a matéria  
+git clone [https://github.com/seu-usuario/ecoradar.git](https://github.com/seu-usuario/ecoradar.git)
 
 ---
 
-## 🧮 Calculadora de CO₂
+## 2. Acessar o diretório do projeto
 
-Ferramenta que estima o **impacto ambiental do usuário**.
-
-### Dados utilizados
-
-- Km percorridos  
-- Consumo de energia  
-- Uso de plástico  
-- Tipo de alimentação  
-
-### Resultado
-
-- Estimativa de emissão de CO₂  
-- Gráfico visual  
-- Dicas para redução de impacto  
+cd ecoradar
 
 ---
 
-## 🚨 Denúncias Ambientais
+## 3. Instalar dependências
 
-Usuários podem **reportar problemas ambientais**.
-
-### Campos da denúncia
-
-- Título  
-- Descrição  
-- Categoria  
-- Localização  
-- Imagem  
-
-### Exemplos de denúncias
-
-- Lixo irregular  
-- Poluição  
-- Queimadas  
-- Desmatamento  
-
-### Status da denúncia
-
-- Em análise  
-- Investigando  
-- Resolvido  
-- Arquivado  
+npm install
 
 ---
 
-## 🏆 Sistema de Pontuação
+## 4. Configurar variáveis de ambiente
 
-Sistema de **gamificação** para incentivar participação.
+Criar um arquivo `.env` na raiz do projeto:
 
-Exemplos:
-
-- 🌱 +10 pontos por denúncia enviada  
-- 🌱 +5 pontos por usar a calculadora  
-- 🌱 +3 pontos por interagir com conteúdo  
+PORT=3000
+MONGO_URI=sua_string_do_mongodb
+JWT_SECRET=sua_chave_secreta
 
 ---
 
-## 📊 Painel Administrativo
+## 5. Iniciar o servidor
 
-Área restrita para **administradores**.
+npm run dev
 
-Permite:
+---
 
-- Gerenciar denúncias  
-- Alterar status  
-- Visualizar relatórios  
-- Moderar conteúdo  
+# 🔒 Segurança
+
+O projeto inclui práticas básicas de segurança como:
+
+- autenticação baseada em token
+- criptografia de senhas
+- controle de acesso a rotas protegidas
+- validação de requisições
+
+---
+
+
+# 🤝 Contribuição
+
+Contribuições são bem-vindas.
+
+Caso deseje contribuir:
+
+1. Faça um fork do projeto
+2. Crie uma nova branch
+3. Envie suas alterações
+4. Abra um pull request
+
+---
+
+# 📄 Licença
+
+Este projeto está licenciado sob a **MIT License**.
+
+---
+
+# 🌱 EcoRadar
+
+Tecnologia e participação social para um ambiente mais sustentável.
+
+---
