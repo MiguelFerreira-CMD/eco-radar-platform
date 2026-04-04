@@ -27,7 +27,7 @@ Dentro dessa pasta estão organizados os módulos responsáveis pelas diferentes
 
 # Config
 
-## config/database.js
+## config/db.js
 
 Este arquivo é responsável por configurar e estabelecer a conexão com o banco de dados **MongoDB**.
 
@@ -52,7 +52,6 @@ Os controllers são responsáveis por processar as requisições recebidas pelas
 
 Eles atuam como intermediários entre:
 
-- as rotas da API
 - os modelos de dados
 - os serviços da aplicação
 
@@ -79,38 +78,15 @@ POST /register
 
 ---
 
-## denunciaController.js
+## controllers/calcController.js
 
-Gerencia todas as operações relacionadas às **denúncias ambientais** registradas na plataforma.
+Lógica do cálculo
 
-Entre suas responsabilidades estão:
+*Faz:*
 
-- criação de novas denúncias
-- listagem de denúncias registradas
-- atualização do status das denúncias
-- comunicação com o banco de dados para armazenamento das informações
-
-**Exemplos de endpoints:**
-
-
-POST /denuncia
-GET /denuncias
-PUT /denuncia/:id
-
-
----
-
-## rankingController.js
-
-Responsável por gerar e fornecer o **ranking de usuários mais ativos** na plataforma.
-
-Esse ranking é baseado na **pontuação acumulada pelos usuários** ao registrar denúncias ambientais.
-
-**Exemplo de endpoint:**
-
-
-GET /ranking
-
+* Receber dados
+* Calcular CO₂
+* Salvar no banco
 
 ---
 
@@ -124,7 +100,7 @@ Esses modelos são criados utilizando **Mongoose**, que permite definir **esquem
 
 ---
 
-## User.js
+## models/user.js
 
 Define a estrutura de dados de um **usuário da plataforma**.
 
@@ -144,21 +120,15 @@ Essas informações permitem gerenciar:
 
 ---
 
-## Denuncia.js
+## models/Calculation.js
 
-Define a estrutura de uma **denúncia ambiental registrada no sistema**.
+Modelo dos cálculos
 
-**Exemplo de campos:**
+*Define:*
 
-- titulo
-- descricao
-- imagem
-- localizacao
-- usuarioId
-- status
-- data
-
-Esses dados permitem **registrar, analisar e acompanhar ocorrências ambientais** reportadas pelos usuários.
+* ID do usuário
+* Valor de CO₂
+* Data
 
 ---
 
@@ -172,41 +142,25 @@ As rotas recebem as **requisições HTTP** e as direcionam para os controllers r
 
 ---
 
-## authRoutes.js
+## routes/authRoutes.js
 
-Define as rotas relacionadas à **autenticação de usuários**.
+Rotas de autenticação
 
-**Exemplos de endpoints:**
+*Ex:*
 
-
-POST /api/login
-POST /api/register
-
+* POST /login
+* POST /register
 
 ---
 
-## denunciaRoutes.js
+## routes/calcRoutes.js
 
-Define as rotas responsáveis por manipular as **denúncias ambientais**.
+Rotas da calculadora
 
-**Exemplos de endpoints:**
+*Ex:*
 
-
-POST /api/denuncias
-GET /api/denuncias
-
-
----
-
-## rankingRoutes.js
-
-Define os endpoints responsáveis por fornecer os dados do **ranking de usuários**.
-
-**Exemplo:**
-
-
-GET /api/ranking
-
+* POST /calculate
+* GET /history
 
 ---
 
@@ -224,102 +178,25 @@ Eles são usados para executar:
 
 ---
 
-## authMiddleware.js
+## 🔒 middleware/authMiddleware.js
 
-Middleware responsável por verificar se o **usuário está autenticado**.
+👉 Proteção de rotas
 
-Suas funções incluem:
+*Faz:*
 
-- validar tokens **JWT**
-- verificar permissões de acesso
-- bloquear requisições não autorizadas
-
----
-
-## uploadMiddleware.js
-
-Responsável por processar o **upload de arquivos**, como imagens enviadas nas denúncias.
-
-Geralmente utiliza a biblioteca:
-
-
-multer
-
-
-Esse middleware garante que os arquivos enviados sejam **processados corretamente antes de serem armazenados**.
-
----
-
-# Services
-
-## services/
-
-A pasta `services` contém **regras de negócio mais complexas** que não devem ficar diretamente nos controllers.
-
-Essa separação ajuda a manter o código **mais organizado e reutilizável**.
-
----
-
-## pontuacaoService.js
-
-Responsável por calcular e atualizar a **pontuação dos usuários** com base em suas atividades no sistema.
-
-**Exemplo de lógica aplicada:**
-
-- +10 pontos por denúncia enviada
-- +20 pontos se a denúncia for verificada
-
-Esses pontos são utilizados para gerar o **ranking de usuários da plataforma**.
-
----
-
-# Utils
-
-## utils/
-
-Contém **funções auxiliares reutilizáveis** utilizadas em diferentes partes da aplicação.
-
-Essas funções ajudam a:
-
-- evitar duplicação de código
-- tornar o sistema mais modular
-
----
-
-## generateToken.js
-
-Responsável por gerar **tokens de autenticação JWT** utilizados no sistema de login.
-
-Esse token é enviado ao usuário após **autenticação bem-sucedida** e utilizado para validar **requisições protegidas**.
-
----
-
-# Arquivos Principais da Aplicação
-
-## app.js
-
-Arquivo responsável por **configurar a aplicação Express**.
-
-Aqui são definidos:
-
-- middlewares globais
-- configuração da API
-- registro das rotas da aplicação
-
-Esse arquivo organiza e prepara o **servidor antes de ele ser iniciado**.
+* Verifica token
+* Libera acesso só pra usuários logados
 
 ---
 
 ## server.js
 
-Este arquivo é responsável por **iniciar o servidor da aplicação**.
+## server.js
 
-Ele executa o método:
+Coração do backend
 
+*Faz:*
 
-app.listen(PORT)
-
-
-e define a **porta onde a API ficará disponível**.
-
-Após iniciar, o backend passa a **aceitar requisições HTTP da aplicação frontend**.
+* Inicializa o servidor
+* Configura rotas
+* Conecta ao banco

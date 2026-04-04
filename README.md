@@ -1,49 +1,45 @@
 # 🌱 EcoRadar
 
-**EcoRadar** é uma plataforma digital criada para permitir que cidadãos identifiquem, registrem e acompanhem problemas ambientais em suas cidades.
+O EcoRadar é uma plataforma digital voltada à conscientização ambiental, com foco na emissão de CO₂ e no impacto das ações humanas no meio ambiente.
 
-A plataforma conecta tecnologia, participação social e conscientização ambiental para ajudar na identificação de problemas como poluição de rios, descarte irregular de lixo, esgoto a céu aberto e outros impactos ambientais.
-
-O objetivo é transformar cidadãos em agentes ativos na proteção do meio ambiente através de tecnologia acessível.
+A proposta do projeto é oferecer uma experiência simples, acessível e educativa, permitindo que usuários aprendam sobre sustentabilidade, calculem sua emissão de carbono e acompanhem seus próprios dados ao longo do tempo.
 
 ---
 
 # 🚀 Visão do Projeto
 
-O EcoRadar busca criar um sistema onde qualquer pessoa possa contribuir com a preservação ambiental reportando problemas em sua região.
+O EcoRadar busca incentivar a conscientização ambiental através da tecnologia, permitindo que qualquer pessoa:
 
-Através da plataforma, usuários podem registrar denúncias ambientais, acompanhar o status da análise dessas denúncias e contribuir para um sistema de monitoramento ambiental coletivo.
+- entender seu impacto ambiental  
+- calcular sua emissão de CO₂  
+- acompanhar seus resultados  
+- aprender formas de reduzir seu impacto  
 
-O projeto também promove educação ambiental através de ferramentas interativas e conteúdos informativos.
+O projeto transforma dados ambientais em uma experiência interativa e educativa.
 
 ---
 
 # 🌍 Problema
 
-Em muitas cidades, problemas ambientais como:
+Muitas pessoas não têm noção do impacto ambiental causado por suas atividades diárias, especialmente em relação à emissão de CO₂.
 
-- poluição de rios
-- descarte irregular de lixo
-- esgoto a céu aberto
-- poluição do ar
+Além disso:
 
-demoram a ser identificados ou reportados aos órgãos responsáveis.
-
-A falta de canais simples para denúncia e conscientização reduz a participação da população na preservação ambiental.
+- falta de ferramentas simples para cálculo de emissão de carbono  
+- pouca conscientização sobre sustentabilidade  
+- dificuldade em acompanhar hábitos ao longo do tempo  
 
 ---
 
 # 💡 Solução
 
-O **EcoRadar** oferece uma plataforma digital onde cidadãos podem:
+O EcoRadar oferece uma plataforma web simples onde usuários podem:
 
-- registrar denúncias ambientais com fotos
-- acompanhar o status da análise dessas denúncias
-- visualizar informações educativas sobre sustentabilidade
-- calcular sua emissão aproximada de CO₂
-- participar de um ranking de contribuição ambiental
-
-A plataforma transforma participação ambiental em uma experiência interativa e acessível.
+- criar uma conta e fazer login  
+- acessar conteúdos educativos sobre meio ambiente  
+- calcular sua emissão de CO₂  
+- salvar seus resultados  
+- acompanhar seu histórico de emissões  
 
 ---
 
@@ -51,202 +47,66 @@ A plataforma transforma participação ambiental em uma experiência interativa 
 
 ## 👤 Sistema de Usuários
 
-- Cadastro de usuários
-- Login seguro
-- Autenticação baseada em token
-- Perfil de usuário
+- Cadastro de usuários  
+- Login funcional  
+- Armazenamento de dados no navegador (ex: LocalStorage)  
+- Identificação do usuário logado  
 
 ---
 
-## 🚨 Sistema de Denúncias Ambientais
+## 🔐 Autenticação Simples
 
-Usuários podem registrar denúncias contendo:
-
-- título da denúncia
-- descrição do problema
-- imagem da ocorrência
-- localização
-- data do registro
-
-Cada denúncia passa por um processo de análise e recebe um status:
-
-- **Em análise**
-- **Verificada**
-- **Rejeitada**
-
-As imagens enviadas ficam disponíveis apenas no painel administrativo.
-
----
-
-## 🛠 Painel Administrativo
-
-Administradores podem:
-
-- visualizar denúncias enviadas
-- analisar evidências
-- verificar imagens enviadas
-- aprovar ou rejeitar denúncias
-- atualizar o status das ocorrências
+- Sistema de login baseado em JavaScript  
+- Validação de usuário e senha  
+- Persistência de sessão no navegador  
 
 ---
 
 ## 🧮 Calculadora de Emissão de CO₂
 
-Ferramenta educativa que permite aos usuários estimar sua emissão de carbono com base em hábitos cotidianos como:
+Ferramenta principal do projeto que permite:
 
-- uso de transporte
-- consumo energético
-- estilo de vida
+- calcular emissão com base em hábitos diários  
+- considerar fatores como:  
+  - transporte  
+  - consumo de energia  
+  - estilo de vida  
 
-A calculadora também fornece recomendações para redução do impacto ambiental.
+Após o cálculo, o sistema:
 
----
-
-## 🏆 Sistema de Pontuação e Ranking
-
-Para incentivar a participação da comunidade, o EcoRadar utiliza um sistema de gamificação.
-
-Usuários recebem pontos por:
-
-- registrar denúncias
-- contribuir com registros válidos
-
-O sistema exibe um ranking com os usuários mais ativos da plataforma.
+- exibe o resultado  
+- salva o valor no perfil do usuário  
 
 ---
 
-## 📡 Monitoramento de Qualidade do Ar
+## 📊 Histórico de Resultados
 
-O projeto também integra um protótipo com **Arduino**, responsável por medir dados ambientais como qualidade do ar.
+- Cada usuário pode visualizar seus cálculos anteriores  
+- Armazenamento local dos dados  
+- Permite acompanhar evolução ao longo do tempo  
 
-Os dados são exibidos fisicamente junto a um **QR Code**, que direciona usuários para a plataforma EcoRadar.
+---
 
-Essa integração demonstra como tecnologia embarcada pode apoiar iniciativas de monitoramento ambiental.
+## 🌱 Conteúdo Educativo
+
+O site também conta com informações sobre:
+
+- impacto do CO₂ no meio ambiente  
+- mudanças climáticas  
+- dicas de sustentabilidade  
+- formas de reduzir emissão de carbono  
 
 ---
 
 # 🧱 Tecnologias Utilizadas
 
-## Frontend
+## FrontEnd
 
-- HTML5
-- CSS3
-- JavaScript
-- TailwindCSS
+- HTML5  
+- CSS3  
+- JavaScript  
 
----
-
-## Backend
+## BackEnd
 
 - Node.js
-- Express.js
-
----
-
-## Banco de Dados
-
 - MongoDB
-- Mongoose
-
----
-
-## Outras Ferramentas
-
-- JWT para autenticação
-- Multer para upload de imagens
-- dotenv para variáveis de ambiente
-
----
-
-# 📁 Estrutura do Projeto
-
-ecoradar
-│
-├── backend
-├── frontend
-├── uploads
-├── docs
-├── arduino
-├── package.json
-├── .env
-├── .gitignore
-├── LICENSE
-├── CONTRINUTING.md
-└── README.md
-
-O projeto está organizado seguindo boas práticas de separação entre **frontend**, **backend** e **armazenamento de arquivos**.
-
----
-
-# ⚙️ Instalação
-
-## 1. Clonar o repositório
-
-git clone [https://github.com/seu-usuario/ecoradar.git](https://github.com/seu-usuario/ecoradar.git)
-
----
-
-## 2. Acessar o diretório do projeto
-
-cd ecoradar
-
----
-
-## 3. Instalar dependências
-
-npm install
-
----
-
-## 4. Configurar variáveis de ambiente
-
-Criar um arquivo `.env` na raiz do projeto:
-
-PORT=3000
-MONGO_URI=sua_string_do_mongodb
-JWT_SECRET=sua_chave_secreta
-
----
-
-## 5. Iniciar o servidor
-
-npm run dev
-
----
-
-# 🔒 Segurança
-
-O projeto inclui práticas básicas de segurança como:
-
-- autenticação baseada em token
-- criptografia de senhas
-- controle de acesso a rotas protegidas
-- validação de requisições
-
----
-
-
-# 🤝 Contribuição
-
-Contribuições são bem-vindas.
-
-Caso deseje contribuir:
-
-1. Faça um fork do projeto
-2. Crie uma nova branch
-3. Envie suas alterações
-4. Abra um pull request
-
----
-
-# 📄 Licença
-
-Este projeto está licenciado sob a **MIT License**.
-
----
-
-# 🌱 EcoRadar
-
-Tecnologia e participação social para um ambiente mais sustentável.
-
----
