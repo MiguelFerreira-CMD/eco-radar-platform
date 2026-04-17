@@ -1,0 +1,7 @@
+Primeiramente, a calculadora funcionará como uma alternativa para monitorarmos a qualidade do ar de pessoas que estejam em outra cidade ou em locais distantes do nosso Arduino.
+
+O Arduino será responsável por exibir, em tempo real, como está a qualidade do ar no local onde ele estiver instalado. Já o site, por meio da calculadora, permitirá visualizar e comparar informações de outras regiões, como diferentes bairros de Sorocaba ou até cidades do estado de São Paulo.
+
+Para utilizar a calculadora, será necessário realizar um cadastro e fazer login no site. Caso o usuário não esteja autenticado, não poderá acessar a ferramenta.
+
+No momento do uso, alguns dados poderão ser solicitados para gerar resultados mais precisos, como localização, cidade, bairro e hábitos do dia a dia, por exemplo, se utiliza carro, ônibus ou outros meios de transporte. Isso ajudará a apresentar informações mais completas e personalizadas sobre a qualidade do ar.
