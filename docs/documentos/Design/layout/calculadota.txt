@@ -1,7 +1,35 @@
-Primeiramente, a calculadora funcionará como uma alternativa para monitorarmos a qualidade do ar de pessoas que estejam em outra cidade ou em locais distantes do nosso Arduino.
+1. Página Inicial: Seu Primeiro Passo
+Imagine entrar em um ambiente que transmite calma e clareza. A página inicial foi feita para não te confundir:
 
-O Arduino será responsável por exibir, em tempo real, como está a qualidade do ar no local onde ele estiver instalado. Já o site, por meio da calculadora, permitirá visualizar e comparar informações de outras regiões, como diferentes bairros de Sorocaba ou até cidades do estado de São Paulo.
+Navegação Leve: O menu no topo parece flutuar sobre a imagem, mantendo tudo organizado enquanto você explora.
 
-Para utilizar a calculadora, será necessário realizar um cadastro e fazer login no site. Caso o usuário não esteja autenticado, não poderá acessar a ferramenta.
+Convite à Ação: O botão "Começar Agora" é o seu ponto de partida para descobrir como você pode ajudar o planeta hoje.
 
-No momento do uso, alguns dados poderão ser solicitados para gerar resultados mais precisos, como localização, cidade, bairro e hábitos do dia a dia, por exemplo, se utiliza carro, ônibus ou outros meios de transporte. Isso ajudará a apresentar informações mais completas e personalizadas sobre a qualidade do ar.
+Escolha seu Caminho: Através de três blocos visuais simples (o Bento Grid), você decide se quer aprender algo novo, denunciar um problema ou medir seu impacto.
+
+2. Dicas Sustentáveis: Ideias para o Dia a Dia
+Não é apenas teoria; são soluções práticas que você pode começar a usar agora.
+
+Exemplos Reais: O site te ensina, por exemplo, como economizar água no banho ou a importância de reciclar uma simples latinha de alumínio.
+
+Propósito: O objetivo aqui é te dar "superpoderes" para diminuir aquela marca de poluição que você descobriu na calculadora.
+
+3. Canal de Denúncias: Sua Voz na Comunidade
+Aqui, você deixa de ser apenas um espectador e se torna um guardião da sua região.
+
+Simplicidade no Relato: Viu algo errado, como um desmatamento ou queimada? Basta preencher onde aconteceu e o que você viu.
+
+Força Coletiva: Ao registrar isso, você ajuda a criar um mapa de alerta que mantém a comunidade informada e vigilante.
+
+4. Monitor Atmosférico: Sua Calculadora de Vida
+Esta é a parte mais interativa do EcoRadar. Ela transforma números chatos em uma experiência visual fácil de entender.
+
+O Controle está nas suas Mãos: Você arrasta dois botões simples: um para o quanto você usa o carro ou ônibus e outro para o gasto de energia da sua casa.
+
+Mágica em Tempo Real: Conforme você mexe, os números mudam na hora, sem precisar clicar em "calcular" e esperar.
+
+O Medidor de Saúde:
+
+Verde: Significa que seu estilo de vida está em harmonia com o ar.
+
+Amarelo/Vermelho: É um sinal de alerta de que a "pureza do ar" está caindo e que é hora de repensar alguns hábitos.
