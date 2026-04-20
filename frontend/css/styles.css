@@ -1,0 +1,172 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f2f2f2;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* NAVBAR */
+.header {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.nav {
+    width: 92%;
+    max-width: 1200px;
+    background: #ffffff;
+    border-radius: 50px;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #6a8f2d;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.logo img {
+    width: 45px;
+    color: #6a8f2d;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #6a8f2d;
+}
+
+/* HERO */
+.hero {
+    width: 92%;
+    max-width: 1200px;
+    height: 400px;
+    margin: 40px auto;
+    border-radius: 25px;
+    background: linear-gradient(rgba(60, 110, 20, 0.507), rgba(60, 110, 20, 0.671)), url("../assets/images/Unip-eden-verde.PNG");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    color: white;
+    padding: 50px;
+}
+
+.hero h1 {
+    font-size: 56px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 500px;
+    margin-bottom: 25px;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.hero button {
+    background: #a8c66c;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero button:hover {
+    transform: scale(1.05);
+    background: #94b85a;
+}
+
+/* CARDS */
+.cards {
+    width: 92%;
+    height: 200px;
+    max-width: 1200px;
+    margin: 50px auto;
+    display: flex;
+    gap: 25px;
+}
+
+.card {
+    flex: 1;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    transition: all 0.35s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 0%;
+    background: #6a8f2d;
+    transition: 0.4s;
+}
+
+.card:hover::before {
+    width: 100%;
+}
+
+.card h2 {
+    margin-top: 15px;
+    color: #6a8f2d;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.card p {
+    margin-top: 40px;
+    color: #444;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin: 50px 0;
+    color: #666;
+}
