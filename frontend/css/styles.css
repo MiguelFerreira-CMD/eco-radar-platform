@@ -43,14 +43,25 @@ body {
     font-weight: bold;
     font-size: 22px;
     line-height: 1;
+    text-decoration: none;
 }
+
+.logo a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+}
+
 
 .logo span {
     position: relative;
     top: 2px;
 }
 
-h1, h2, .logo {
+h1,
+h2,
+.logo {
     font-family: 'Epilogue', sans-serif;
     font-weight: 900;
 }
@@ -94,6 +105,74 @@ h1, h2, .logo {
 
 .menu a:hover::after {
     width: 100%;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 4px;
+    background-color: #8DAA3F;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* RESPONSIVIDADE (MOBILE) */
+@media (max-width: 768px) {
+    .nav {
+        padding: 15px 25px; 
+        position: relative; 
+        z-index: 1000; 
+    }
+
+    .hamburger {
+        display: flex; 
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        position: absolute;
+        top: 90px; 
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        padding: 20px 0;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        margin: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: all 0.3s ease;
+        z-index: 99;
+    }
+
+    .menu.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
 }
 
 /* HERO */
@@ -238,4 +317,30 @@ footer {
 
 footer p {
     margin-top: 6.5%;
+}
+
+.menu-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 98;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .menu-overlay {
+        display: block;
+    }
+
+    .menu-overlay.active {
+        opacity: 1;
+    }
+
+    body.menu-open {
+        overflow: hidden;
+    }
 }

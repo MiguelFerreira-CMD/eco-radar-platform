@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/images/logoEcoradar.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/dicas.css">
+    <title>Dicas - EcoRadar</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+<header class="header">
+    <nav class="nav">   
+        <div class="logo">
+            <a href="index.html"><img src="../assets/images/logoEcoradar.png" alt="Logo EcoRadar"></a>
+            <a href="index.html"><span>ECORADAR</span></a>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="menu" id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dicas.html">Dicas</a></li>
+            <li><a href="calculadora.html">Calculadora</a></li>
+            <li><a href="denuncia.html">Denúncias</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <!-- OVERLAY BLUR (mobile) -->
+    <div class="menu-overlay" id="menu-overlay"></div>
+
+    <br><br>
+
+    <!-- TITULO -->
+    <section class="top-title">
+        <h1>DICAS SUSTENTÁVEIS</h1>
+    </section>
+
+    <!-- CARDS -->
+    <section class="container-cards">
+
+        <!-- CARD 1 -->
+        <div class="card">
+            <div class="card-top">
+                <div class="icon-wrap">
+                    <i data-lucide="droplets"></i>
+                </div>
+                <div>
+                    <h3>CONSUMO DE ÁGUA</h3>
+                    <p>Diminuir 5 minutos do banho economiza até 90 litros de água. O planeta agradece.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card">
+            <div class="card-top">
+                <div class="icon-wrap">
+                    <i data-lucide="lightbulb"></i>
+                </div>
+                <div>
+                    <h3>ENERGIA</h3>
+                    <p>Apague luzes sem uso e prefira lâmpadas LED para reduzir desperdício.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card">
+            <div class="card-top">
+                <div class="icon-wrap">
+                    <i data-lucide="trees"></i>
+                </div>
+                <div>
+                    <h3>ÁREAS VERDES</h3>
+                    <p>Plante árvores e preserve parques. Mais verde melhora o ar da cidade.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="card">
+            <div class="card-top">
+                <div class="icon-wrap">
+                    <i data-lucide="recycle"></i>
+                </div>
+                <div>
+                    <h3>RECICLAGEM</h3>
+                    <p>Separe resíduos e descarte corretamente para reduzir impactos ambientais.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 5 -->
+        <div class="card">
+            <div class="card-top">
+                <div class="icon-wrap">
+                    <i data-lucide="bus"></i>
+                </div>
+                <div>
+                    <h3>TRANSPORTE</h3>
+                    <p>Use transporte público, bicicleta ou carona compartilhada sempre que possível.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CARD 6 -->
+        <div class="card">
+            <div class="card-top">
+                <div class="icon-wrap">
+                    <i data-lucide="leaf"></i>
+                </div>
+                <div>
+                    <h3>PEQUENAS AÇÕES</h3>
+                    <p>Evite desperdício, consuma menos plástico e faça escolhas conscientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+        const overlay = document.getElementById('menu-overlay');
+
+        function toggleMenu() {
+            menu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        }
+
+        if (hamburger && menu) {
+            hamburger.addEventListener('click', toggleMenu);
+        }
+
+        if (overlay) {
+            overlay.addEventListener('click', toggleMenu);
+        }
+    });
+</script>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

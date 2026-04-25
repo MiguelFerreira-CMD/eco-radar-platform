@@ -12,21 +12,29 @@
 
 <body>
     <!-- NAVBAR -->
-    <header class="header">
-        <nav class="nav">
-            <div class="logo">
-                <img src="../assets/images/logoEcoradar.png" alt="Logo EcoRadar">
-                <span>ECORADAR</span>
-            </div>
+ <header class="header">
+    <nav class="nav">   
+        <div class="logo">
+            <a href="index.html"><img src="../assets/images/logoEcoradar.png" alt="Logo EcoRadar"></a>
+            <a href="index.html"><span>ECORADAR</span></a>
+        </div>
 
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="dicas.html">Dicas</a></li>
-                <li><a href="calculadora.html">Calculadora</a></li>
-                <li><a href="denuncia.html">Denúncias</a></li>
-            </ul>
-        </nav>
-    </header>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="menu" id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dicas.html">Dicas</a></li>
+            <li><a href="calculadora.html">Calculadora</a></li>
+            <li><a href="denuncia.html">Denúncias</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="menu-overlay" id="menu-overlay"></div>
 
     <!-- HERO -->
     <main>
@@ -101,6 +109,29 @@
     <footer>
         <p>&copy; 2026 EcoRadar</p>
     </footer>
+
+      <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+        const overlay = document.getElementById('menu-overlay');
+
+        function toggleMenu() {
+            menu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
+        }
+
+        if (hamburger && menu) {
+            hamburger.addEventListener('click', toggleMenu);
+        }
+
+        if (overlay) {
+            overlay.addEventListener('click', toggleMenu);
+        }
+    });
+</script>
 </body>
 
 </html>
