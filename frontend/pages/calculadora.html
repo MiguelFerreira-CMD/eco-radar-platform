@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="../assets/images/logoEcoradar.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/calculadora.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <title>Calculadora - EcoRadar</title>
 </head>
 
@@ -33,34 +35,124 @@
         </nav>
     </header>
 
-    <div class="menu-overlay" id="menu-overlay"></div>
+    <main class="max-w-6xl mx-auto px-4 md:px-8 py-12">
 
-    <main>
-        <!-- Conteúdo da Calculadora aqui -->
+        <section class="mb-10 fade-up">
+            <h1 class="text-5xl md:text-6xl font-black text-[#8DAA3F] uppercase">
+                Calculadora
+            </h1>
+
+            <p class="mt-3 text-gray-500 text-lg">
+                Ajuste os dados para simular sua pegada ambiental mensal.
+            </p>
+        </section>
+
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <!-- ESQUERDA -->
+            <div class="bg-white rounded-[32px] p-8 border border-[#DADADA] card-shadow fade-up">
+
+                <div class="mb-10">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="font-bold text-lg">Transporte (km/mês)</h3>
+                        <span id="kmValue" class="font-black text-[#8DAA3F] text-xl">100 km</span>
+                    </div>
+                    <input type="range" min="0" max="1000" value="100" id="kmRange">
+                </div>
+
+                <div class="mb-10">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="font-bold text-lg">Energia (kWh/mês)</h3>
+                        <span id="energyValue" class="font-black text-[#8DAA3F] text-xl">150 kWh</span>
+                    </div>
+                    <input type="range" min="0" max="1000" value="150" id="energyRange">
+                </div>
+
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="font-bold text-lg">Fumaça Poluente (cigarros/dia)</h3>
+                        <span id="smokeValue" class="font-black text-[#8DAA3F] text-xl">5 un</span>
+                    </div>
+                    <input type="range" min="0" max="40" value="5" id="smokeRange">
+                </div>
+
+            </div>
+
+            <!-- DIREITA -->
+            <div class="bg-white rounded-[32px] p-8 border border-[#DADADA] card-shadow fade-up">
+
+                <div class="h-full flex flex-col justify-between">
+
+                    <div>
+                        <span class="text-sm tracking-[3px] uppercase text-gray-400 font-semibold">
+                            Emissão Estimada
+                        </span>
+
+                        <div class="mt-5 flex items-end gap-3">
+                            <h2 id="co2Value" class="text-7xl font-black text-[#8DAA3F] leading-none">
+                                82.5
+                            </h2>
+
+                            <span class="pb-3 font-bold text-gray-500">
+                                kg CO₂ / mês
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="mt-14">
+                        <div class="flex justify-between mb-3 text-sm font-bold text-gray-500">
+                            <span>Pureza do Ar</span>
+                            <span id="statusText" class="text-[#8DAA3F]">ÓTIMA</span>
+                        </div>
+
+                        <div class="w-full h-4 rounded-full bg-[#ecece4] overflow-hidden">
+                            <div id="barFill" class="h-full bg-[#8DAA3F] rounded-full transition-all duration-500"
+                                style="width:85%;">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <!-- HISTÓRICO -->
+        <section class="mt-12 fade-up">
+            <div class="bg-white rounded-[32px] p-8 border border-[#DADADA] card-shadow">
+
+                <h2 class="text-2xl font-black text-[#8DAA3F] mb-6">
+                    Histórico de Testes
+                </h2>
+
+                <div class="grid md:grid-cols-3 gap-4 mb-6">
+
+                    <input id="localInput" type="text" placeholder="Local"
+                        class="p-3 rounded-xl border border-gray-300 outline-none focus:border-[#8DAA3F]">
+
+                    <input id="timeInput" type="time"
+                        class="p-3 rounded-xl border border-gray-300 outline-none focus:border-[#8DAA3F]">
+
+                    <input id="resultInput" type="text" placeholder="Resultado (kg CO₂)" readonly
+                        class="p-3 rounded-xl border border-gray-300 bg-gray-100">
+
+                </div>
+
+                <button onclick="addHistory()"
+                    class="bg-[#8DAA3F] text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition">
+                    Salvar Registro
+                </button>
+
+                <div class="mt-8">
+                    <ul id="historyList" class="space-y-3 text-sm"></ul>
+                </div>
+
+            </div>
+        </section>
+
     </main>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const hamburger = document.getElementById('hamburger');
-            const menu = document.getElementById('menu');
-            const overlay = document.getElementById('menu-overlay');
-
-            function toggleMenu() {
-                menu.classList.toggle('active');
-                hamburger.classList.toggle('active');
-                overlay.classList.toggle('active');
-                document.body.classList.toggle('menu-open');
-            }
-
-            if (hamburger && menu) {
-                hamburger.addEventListener('click', toggleMenu);
-            }
-
-            if (overlay) {
-                overlay.addEventListener('click', toggleMenu);
-            }
-        });
-    </script>
+    <script src="../js/calculator.js"></script>
 </body>
 
 </html>
