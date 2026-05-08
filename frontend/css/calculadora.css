@@ -1,11 +1,9 @@
-/* TUDO */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* SELEÇÃO DE TEXTO */
 ::selection {
     background: #8DAA3F;
     color: #fff;
@@ -16,7 +14,6 @@ body {
     font-family: 'Epilogue', Arial, sans-serif;
 }
 
-/* NAVBAR */
 .header {
     display: flex;
     justify-content: center;
@@ -69,7 +66,6 @@ h2,
     width: 60px;
 }
 
-/* MENU */
 .menu {
     display: flex;
     list-style: none;
@@ -122,7 +118,6 @@ h2,
     transition: all 0.3s ease;
 }
 
-/* RESPONSIVIDADE (MOBILE) */
 @media (max-width: 768px) {
     .nav {
         padding: 15px 25px; 
@@ -172,9 +167,9 @@ h2,
     .hamburger.active span:nth-child(3) {
         transform: translateY(-9px) rotate(-45deg);
     }
+
 }
 
-/* FOOTER */
 footer {
     text-align: center;
     margin: 50px 0;

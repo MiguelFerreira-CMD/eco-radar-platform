@@ -5,42 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="../assets/images/logoEcoradar.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/img/logoEcoradar.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/styles.css">
     <title>EcoRadar</title>
 </head>
 
 <body>
-    <!-- NAVBAR -->
- <header class="header">
-    <nav class="nav">   
-        <div class="logo">
-            <a href="index.html"><img src="../assets/images/logoEcoradar.png" alt="Logo EcoRadar"></a>
-            <a href="index.html"><span>ECORADAR</span></a>
-        </div>
+ 
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <a href="index.html"><img src="../assets/img/logoEcoradar.png" alt="Logo EcoRadar"></a>
+                <a href="index.html"><span>ECORADAR</span></a>
+            </div>
 
-        <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
 
-        <ul class="menu" id="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="dicas.html">Dicas</a></li>
-            <li><a href="calculadora.html">Calculadora</a></li>
-            <li><a href="denuncia.html">Denúncias</a></li>
-        </ul>
-    </nav>
-</header>
+            <ul class="menu" id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dicas.html">Dicas</a></li>
+                <li><a href="calculadora.html">Calculadora</a></li>
+                <li><a href="denuncia.html">Denúncias</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="menu-overlay" id="menu-overlay"></div>
+    <div class="menu-overlay" id="menu-overlay"></div>
 
-    <!-- HERO -->
     <main>
         <section class="hero">
             <div class="hero-content">
-                <img src="../assets/images/logoEcoradar.png" alt="LogoHero" class="hero-logo" style="margin-left: 10%;">
+                <img src="../assets/img/logoEcoradar.png" alt="LogoHero" class="hero-logo" style="margin-left: 10%;">
                 <h1>EcoRadar</h1>
                 <p>
                     <strong>Conectando cidadãos à preservação ambiental.<br>
@@ -50,11 +49,9 @@
             </div>
         </section>
 
-        <!-- CARDS -->
         <section class="cards">
             <div class="card">
                 <div class="card-icon">
-                    <!-- lâmpada -->
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                         <path
                             d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5" />
@@ -68,7 +65,6 @@
 
             <div class="card">
                 <div class="card-icon">
-                    <!-- alerta -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="lucide lucide-triangle-alert-icon lucide-triangle-alert">
@@ -83,7 +79,6 @@
 
             <div class="card">
                 <div class="card-icon">
-                    <!-- calculadora -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="lucide lucide-calculator-icon lucide-calculator">
@@ -104,34 +99,8 @@
             </div>
         </section>
     </main>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2026 EcoRadar</p>
-    </footer>
-
-      <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const hamburger = document.getElementById('hamburger');
-        const menu = document.getElementById('menu');
-        const overlay = document.getElementById('menu-overlay');
-
-        function toggleMenu() {
-            menu.classList.toggle('active');
-            hamburger.classList.toggle('active');
-            overlay.classList.toggle('active');
-            document.body.classList.toggle('menu-open');
-        }
-
-        if (hamburger && menu) {
-            hamburger.addEventListener('click', toggleMenu);
-        }
-
-        if (overlay) {
-            overlay.addEventListener('click', toggleMenu);
-        }
-    });
-</script>
+    
+    <script src="../js/navbar.js"></script>
 </body>
 
 </html>

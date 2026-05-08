@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="../assets/images/logoEcoradar.png" type="image/x-icon">
+    <link rel="icon" href="../assets/img/logoEcoradar.png" type="image/x-icon">
     <link rel="stylesheet" href="../css/denuncia.css">
-    <title>Denúncias - EcoRadar</title>
+    <title>Denúncia</title>
 </head>
 
 <body>
-    <!-- NAVBAR -->
+
     <header class="header">
         <nav class="nav">
             <div class="logo">
-                <a href="index.html"><img src="../assets/images/logoEcoradar.png" alt="Logo EcoRadar"></a>
+                <a href="index.html"><img src="../assets/img/logoEcoradar.png" alt="Logo EcoRadar"></a>
                 <a href="index.html"><span>ECORADAR</span></a>
             </div>
 
@@ -29,38 +29,62 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="dicas.html">Dicas</a></li>
                 <li><a href="calculadora.html">Calculadora</a></li>
+                <li><a href="denuncia.html">Denúncias</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="menu-overlay" id="menu-overlay"></div>
 
-    <main>
-        <!-- Conteúdo de Denúncias aqui -->
+    <main class="container">
+
+        <section class="sobre">
+            <div class="container">
+                <span class="subtitulo">Conscientização Ambiental</span>
+
+                <h2>Entenda o Impacto dos Crimes Ambientais na Sociedade</h2>
+
+                <p>
+                    Crimes ambientais são ações ou atividades que causam danos ao meio ambiente,
+                    à fauna, à flora ou à saúde pública, sendo proibidas por leis ambientais.
+                    Essas infrações incluem desmatamento ilegal, queimadas, poluição,
+                    tráfico de animais silvestres, descarte irregular de resíduos tóxicos
+                    e exploração indevida de recursos naturais.
+                </p>
+
+                <p>
+                    No Brasil, a Lei nº 9.605/1998 estabelece sanções para práticas que
+                    prejudicam o equilíbrio ambiental. As penalidades podem envolver multas,
+                    suspensão de atividades, responsabilização civil e até prisão,
+                    conforme a gravidade da infração cometida.
+                </p>
+
+                <p>
+                    A preservação ambiental é essencial para garantir qualidade de vida,
+                    desenvolvimento sustentável e proteção das futuras gerações.
+                    Promover a conscientização e combater práticas ilegais são passos
+                    fundamentais para construir um futuro mais sustentável.
+                </p>
+            </div>
+        </section>
+
+        <section class="denuncia">
+
+            <div class="denuncia-box">
+
+                <p>
+                    Faça aqui a sua denúncia de crimes ambientais de forma rápida e segura.
+                </p>
+
+                <button><a href="#">Fazer Denúncia</a></button>
+
+            </div>
+
+        </section>
+
     </main>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const hamburger = document.getElementById('hamburger');
-            const menu = document.getElementById('menu');
-            const overlay = document.getElementById('menu-overlay');
-
-            function toggleMenu() {
-                menu.classList.toggle('active');
-                hamburger.classList.toggle('active');
-                overlay.classList.toggle('active');
-                document.body.classList.toggle('menu-open');
-            }
-
-            if (hamburger && menu) {
-                hamburger.addEventListener('click', toggleMenu);
-            }
-
-            if (overlay) {
-                overlay.addEventListener('click', toggleMenu);
-            }
-        });
-    </script>
+    <script src="../js/navbar.js"></script>
 </body>
 
 </html>

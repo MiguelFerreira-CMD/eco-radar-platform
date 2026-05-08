@@ -1,11 +1,9 @@
-/* TUDO */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* SELEÇÃO DE TEXTO */
 ::selection {
     background: #8DAA3F;
     color: #fff;
@@ -16,7 +14,6 @@ body {
     font-family: 'Epilogue', Arial, sans-serif;
 }
 
-/* NAVBAR */
 .header {
     display: flex;
     justify-content: center;
@@ -70,7 +67,6 @@ h2,
     width: 60px;
 }
 
-/* MENU */
 .menu {
     display: flex;
     list-style: none;
@@ -123,7 +119,6 @@ h2,
     transition: all 0.3s ease;
 }
 
-/* RESPONSIVIDADE (MOBILE) */
 @media (max-width: 768px) {
     .nav {
         padding: 15px 25px; 
@@ -175,14 +170,13 @@ h2,
     }
 }
 
-/* HERO */
 .hero {
     width: 92%;
     max-width: 1200px;
     height: 400px;
     margin: 40px auto;
     border-radius: 25px;
-    background: linear-gradient(rgba(60, 110, 20, 0.425), rgba(60, 110, 20, 0.24)), url("../assets/images/Unip-eden-verde.PNG");
+    background: linear-gradient(rgba(60, 110, 20, 0.425), rgba(60, 110, 20, 0.24)), url("../assets/img/Unip-eden-verde.PNG");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -226,7 +220,6 @@ h2,
     background: #7c9636;
 }
 
-/* CARDS */
 .cards {
     width: 92%;
     height: 200px;
@@ -268,7 +261,6 @@ h2,
     width: 100%;
 }
 
-/* TÍTULO */
 .card h2 {
     margin-top: 32px;
     color: #8DAA3F;
@@ -284,7 +276,6 @@ h2,
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* ÍCONE */
 .card-icon {
     position: absolute;
     top: 20px;
@@ -299,7 +290,6 @@ h2,
     stroke-width: 2.8;
 }
 
-/* CORES POR CARD */
 .card:nth-child(2) .card-icon {
     color: #e53935;
 }
@@ -308,7 +298,6 @@ h2,
     color: #1e88e5;
 }
 
-/* FOOTER */
 footer {
     text-align: center;
     margin: 50px 0;

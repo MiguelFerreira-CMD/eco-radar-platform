@@ -1,11 +1,9 @@
-/* TUDO */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* SELEÇÃO DE TEXTO */
 ::selection {
     background: #8DAA3F;
     color: #fff;
@@ -14,9 +12,9 @@
 body {
     background: #f2f2f2;
     font-family: 'Epilogue', Arial, sans-serif;
+    font-size: 16px;
 }
 
-/* NAVBAR */
 .header {
     display: flex;
     justify-content: center;
@@ -69,7 +67,6 @@ h2,
     width: 60px;
 }
 
-/* MENU */
 .menu {
     display: flex;
     list-style: none;
@@ -122,59 +119,114 @@ h2,
     transition: all 0.3s ease;
 }
 
-/* RESPONSIVIDADE (MOBILE) */
-@media (max-width: 768px) {
-    .nav {
-        padding: 15px 25px; 
-        position: relative; 
-        z-index: 1000; 
-    }
-
-    .hamburger {
-        display: flex; 
-    }
-
-    .menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        position: absolute;
-        top: 90px; 
-        left: 0;
-        width: 100%;
-        background: #ffffff;
-        padding: 20px 0;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-        margin: 0;
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-20px);
-        transition: all 0.3s ease;
-        z-index: 99;
-    }
-
-    .menu.active {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-    }
-
-    .hamburger.active span:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
-    }
-    
-    .hamburger.active span:nth-child(2) {
-        opacity: 0;
-    }
-    
-    .hamburger.active span:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
-    }
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 4%;
 }
 
-/* FOOTER */
+.sobre {
+    margin-top: 30px;
+    background: #ffffff;
+    border-radius: 22px;
+    padding: 30px 35px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    position: relative;
+    overflow: hidden;
+}
+
+.sobre::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: #8DAA3F;
+}
+
+.sobre .subtitulo {
+    display: inline-block;
+    background: rgba(141, 170, 63, 0.12);
+    color: #8DAA3F;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.sobre h2 {
+    color: #2A0E05;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    font-weight: 900;
+}
+
+.sobre p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.denuncia {
+    margin-top: 50px;
+}
+
+.denuncia h2 {
+    color: #8DAA3F;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    font-weight: 900;
+}
+
+.denuncia-box {
+    background: #2A0E05;
+    border-radius: 25px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    width: 100%;
+}
+
+.denuncia-box p {
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    flex: 1;
+}
+
+.denuncia-box button {
+    padding: 16px 32px;
+    border: none;
+    border-radius: 12px;
+    background: #8DAA3F;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.denuncia-box button a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.denuncia-box button:hover {
+    transform: scale(1.05);
+    background: #7c9636;
+}
+
 footer {
     text-align: center;
     margin: 50px 0;
@@ -198,6 +250,50 @@ footer p {
 }
 
 @media (max-width: 768px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .nav {
+        padding: 12px 18px;
+    }
+
+    .logo img {
+        width: 45px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        padding: 15px 0;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+        margin: 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px);
+        transition: all 0.3s ease;
+        z-index: 99;
+    }
+
+    .menu.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
     .menu-overlay {
         display: block;
     }
@@ -208,5 +304,41 @@ footer p {
 
     body.menu-open {
         overflow: hidden;
+    }
+
+    .container {
+        margin: 15px auto;
+        padding: 0 3%;
+    }
+
+    .sobre {
+        padding: 18px 14px;
+    }
+
+    .sobre h2 {
+        font-size: 1.3rem;
+    }
+
+    .sobre p {
+        font-size: 0.95rem;
+    }
+
+    .denuncia h2 {
+        font-size: 1.4rem;
+    }
+
+    .denuncia-box {
+        flex-direction: column;
+        padding: 18px 14px;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .denuncia-box p {
+        font-size: 0.95rem;
+    }
+
+    .denuncia-box button {
+        width: 100%;
     }
 }

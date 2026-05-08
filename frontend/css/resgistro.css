@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    background: black;
+}
+
+.background {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 0;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../assets/img/floresta.jpeg") center center/cover no-repeat;
+    filter: grayscale(100%);
+    z-index: -1;
+}
+
+.register-card {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 430px;
+    max-height: 95vh;
+    overflow-y: auto; 
+    padding: 35px;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.30);
+    color: white;
+    text-align: center;
+}
+
+.register-card::-webkit-scrollbar {
+    width: 0px;
+}
+
+.logo {
+    width: 85px;
+    margin-bottom: 20px;
+}
+
+.register-card h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.input-box {
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 0.95rem;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.input-box input:focus {
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.input-box i {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #8CAA3F;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #9dba50;
+    transform: translateY(-2px);
+}
+
+.login-link {
+    margin-top: 20px;
+    font-size: 0.85rem;
+}
+
+.login-link a {
+    color: #8CAA3F;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}
+
+@media(max-height: 700px) {
+    .register-card {
+        padding: 20px 25px;
+    }
+    .logo {
+        width: 60px;
+        margin-bottom: 10px;
+    }
+    form {
+        gap: 10px;
+    }
+}
