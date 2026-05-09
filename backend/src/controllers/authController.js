@@ -3,8 +3,6 @@ const jwt = require("jsonwebtoken");
 
 const User = require("../models/User");
 
-
-// CADASTRO
 const register = async (req, res) => {
 
     try {
@@ -12,7 +10,6 @@ const register = async (req, res) => {
         const { name, password } = req.body;
         const email = req.body.email.toLowerCase().trim();
 
-        // verifica se email já existe
         const userExists = await User.findOne({ email });
 
         if (userExists) {
@@ -21,17 +18,14 @@ const register = async (req, res) => {
             });
         }
 
-        // criptografa senha
         const hashedPassword = await bcrypt.hash(password, 10);
 
-        // cria usuário
         const user = new User({
             name,
             email,
             password: hashedPassword
         });
 
-        // salva usuário
         await user.save();
 
         res.status(201).json({
@@ -48,8 +42,6 @@ const register = async (req, res) => {
 
 };
 
-
-// LOGIN
 const login = async (req, res) => {
 
     try {
@@ -57,7 +49,6 @@ const login = async (req, res) => {
         const { password } = req.body;
         const email = req.body.email.toLowerCase().trim();
 
-        // procura usuário
         const user = await User.findOne({ email });
 
         if (!user) {
@@ -66,7 +57,6 @@ const login = async (req, res) => {
             });
         }
 
-        // verifica senha
         const validPassword = await bcrypt.compare(
             password,
             user.password
@@ -78,7 +68,6 @@ const login = async (req, res) => {
             });
         }
 
-        // gera token JWT
         const token = jwt.sign(
             { id: user._id },
             process.env.JWT_SECRET,

@@ -4,7 +4,7 @@ const authMiddleware = (req, res, next) => {
 
     const authHeader = req.headers.authorization;
 
-    if(!authHeader){
+    if (!authHeader) {
         return res.status(401).json({
             message: "Token não fornecido"
         });
@@ -23,7 +23,7 @@ const authMiddleware = (req, res, next) => {
 
         next();
 
-    } catch(err){
+    } catch (err) {
 
         return res.status(401).json({
             message: "Token inválido"

@@ -49,7 +49,6 @@ body{
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.30);
     color: white;
-    text-align: center;
 }
 
 .register-card::-webkit-scrollbar {
@@ -58,7 +57,8 @@ body{
 
 .logo {
     width: 85px;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
+    display: block;
 }
 
 .register-card h1 {
@@ -130,6 +130,11 @@ button {
 button:hover {
     background: #9dba50;
     transform: translateY(-2px);
+}
+
+.login-link {
+    margin-top: 15px;
+    text-align: center;
 }
 
 .login-link a {
