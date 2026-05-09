@@ -35,7 +35,7 @@
                 Crie sua conta no EcoRadar
             </p>
 
-            <form>
+            <form id="registerForm">
 
                 <div class="input-group">
 
@@ -43,7 +43,12 @@
 
                     <div class="input-box">
 
-                        <input type="text" placeholder="Digite seu nome completo">
+                        <input 
+                            type="text" 
+                            placeholder="Digite seu nome completo"
+                            id="name"
+                            required
+                        >
 
                     </div>
 
@@ -55,7 +60,12 @@
 
                     <div class="input-box">
 
-                        <input type="email" placeholder="seu@email.com">
+                        <input 
+                            type="email" 
+                            placeholder="seu@email.com"
+                            id="email"
+                            required
+                        >
 
                     </div>
 
@@ -67,9 +77,14 @@
 
                     <div class="input-box">
 
-                        <input type="password" placeholder="Crie uma senha" id="senha">
+                        <input 
+                            type="password" 
+                            placeholder="Crie uma senha" 
+                            id="senha"
+                            required
+                        >
 
-                        <i class="fa-solid fa-eye" id="toggleSenha" style="color: #8CAA3F  ;"></i>
+                        <i class="fa-solid fa-eye" id="toggleSenha" style="color: #8CAA3F;"></i>
 
                     </div>
 
@@ -81,9 +96,14 @@
 
                     <div class="input-box">
 
-                        <input type="password" placeholder="Digite a senha novamente" id="confirmarSenha">
+                        <input 
+                            type="password" 
+                            placeholder="Digite a senha novamente" 
+                            id="confirmarSenha"
+                            required
+                        >
 
-                        <i class="fa-solid fa-eye" id="toggleConfirmar" style="color: #8CAA3F  ;"></i>
+                        <i class="fa-solid fa-eye" id="toggleConfirmar" style="color: #8CAA3F;"></i>
 
                     </div>
 
@@ -100,7 +120,7 @@
                 <p>
                     Já possui uma conta?
 
-                    <a href="login.html">
+                    <a href="/">
                         Entrar
                     </a>
 
@@ -113,6 +133,7 @@
     </div>
 
     <script src="../js/toggle.js"></script>
+    <script src="../js/registro.js"></script>
 
 </body>
 

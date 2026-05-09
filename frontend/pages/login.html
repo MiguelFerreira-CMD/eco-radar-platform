@@ -1,110 +1,123 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+    <!DOCTYPE html>
+    <html lang="pt-BR">
 
-<head>
+    <head>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../css/login.css">
-    <link rel="icon" href="../assets/img/logoEcoradar.png" type="image/png">
+        <link rel="stylesheet" href="../css/login.css">
+        <link rel="icon" href="../assets/img/logoEcoradar.png" type="image/png">
 
-    <title>EcoRadar</title>
+        <title>EcoRadar</title>
 
-    <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-    <div class="background">
+        <div class="background">
 
-        <div class="login-card">
+            <div class="login-card">
 
-            <img src="../assets/img/logoEcoradar.png" alt="Logo" class="logo">
+                <img src="../assets/img/logoEcoradar.png" alt="Logo" class="logo">
 
-            <h1>Bem-vindo de volta</h1>
+                <h1>Bem-vindo de volta</h1>
 
-            <p class="subtitle">
-                Entre na sua conta do EcoRadar
-            </p>
-
-            <form>
-
-                <div class="input-group">
-
-                    <label>Email</label>
-
-                    <div class="input-box">
-
-                        <input type="email" placeholder="seu@email.com">
-
-                    </div>
-
-                </div>
-
-                <div class="input-group">
-
-                    <label>Senha</label>
-
-                    <div class="input-box">
-
-                        <input type="password" placeholder="Digite sua senha" id="senha">
-
-                        <i class="fa-solid fa-eye" id="toggleSenha" style="color: #8CAA3F;"></i>
-
-                    </div>
-
-                </div>
-
-                <div class="options">
-
-                    <div class="remember">
-
-                        <input type="checkbox" id="lembrar">
-
-                        <label for="lembrar">
-                            Lembrar-me
-                        </label>
-
-                    </div>
-
-                    <a href="#">
-                        Esqueceu a senha?
-                    </a>
-
-                </div>
-
-                <button type="submit">
-                    Entrar
-                </button>
-
-            </form>
-
-            <div class="register-link">
-
-                <p>
-                    Ainda não tem uma conta?
-
-                    <a href="registro.html">
-                        Criar conta
-                    </a>
-
+                <p class="subtitle">
+                    Entre na sua conta do EcoRadar
                 </p>
+
+                <form id="loginForm">
+
+                    <div class="input-group">
+
+                        <label>Email</label>
+
+                        <div class="input-box">
+
+                            <input 
+                                type="email" 
+                                placeholder="seu@email.com"
+                                id="email"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Senha</label>
+
+                        <div class="input-box">
+
+                            <input 
+                                type="password" 
+                                placeholder="Digite sua senha" 
+                                id="senha"
+                                required
+                            >
+
+                            <i class="fa-solid fa-eye" id="toggleSenha" style="color: #8CAA3F;"></i>
+
+                        </div>
+
+                    </div>
+
+                    <div class="options">
+
+                        <div class="remember">
+
+                            <input type="checkbox" id="lembrar">
+
+                            <label for="lembrar">
+                                Lembrar-me
+                            </label>
+
+                        </div>
+
+                        <a href="#">
+                            Esqueceu a senha?
+                        </a>
+
+                    </div>
+
+                    <button type="submit">
+                        Entrar
+                    </button>
+
+                </form>
+
+                <div class="register-link">
+
+                    <p>
+                        Ainda não tem uma conta?
+
+                        <a href="/registro">
+                            Criar conta
+                        </a>
+
+                    </p>
+
+                </div>
 
             </div>
 
         </div>
 
-    </div>
-    <script src="../js/toggle.js"></script>
-</body>
+        <script src="../js/toggle.js"></script>
+        <script src="../js/login.js"></script>
 
-</html>
+    </body>
+
+    </html>
