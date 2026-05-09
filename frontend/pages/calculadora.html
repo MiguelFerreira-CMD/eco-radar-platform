@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="icon" href="../assets/img/logoEcoradar.png" type="image/png">
     <link rel="stylesheet" href="../css/calculadora.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -56,24 +56,24 @@
 
                 <div class="mb-6 sm:mb-8">
                     <div class="flex justify-between items-center mb-3">
-                        <h3 class="font-bold text-sm sm:text-base">Transporte (km/mês)</h3>
-                        <span id="kmValue" class="font-black text-[#8DAA3F] text-base sm:text-lg">100 km</span>
+                        <h3 class="text-sm sm:text-base">Transporte (km/mês)</h3>
+                        <span id="kmValue" class="text-[#8DAA3F] text-base sm:text-lg">100 km</span>
                     </div>
                     <input type="range" min="0" max="1000" value="100" id="kmRange" class="w-full accent-[#8DAA3F]">
                 </div>
 
                 <div class="mb-6 sm:mb-8">
                     <div class="flex justify-between items-center mb-3">
-                        <h3 class="font-bold text-sm sm:text-base">Energia (kWh/mês)</h3>
-                        <span id="energyValue" class="font-black text-[#8DAA3F] text-base sm:text-lg">150 kWh</span>
+                        <h3 class="text-sm sm:text-base">Energia (kWh/mês)</h3>
+                        <span id="energyValue" class="text-[#8DAA3F] text-base sm:text-lg">150 kWh</span>
                     </div>
                     <input type="range" min="0" max="1000" value="150" id="energyRange" class="w-full accent-[#8DAA3F]">
                 </div>
 
                 <div>
                     <div class="flex justify-between items-center mb-3">
-                        <h3 class="font-bold text-sm sm:text-base">Fumaça (cigarros/dia)</h3>
-                        <span id="smokeValue" class="font-black text-[#8DAA3F] text-base sm:text-lg">5 un</span>
+                        <h3 class="text-sm sm:text-base">Fumaça (cigarros/dia)</h3>
+                        <span id="smokeValue" class="text-[#8DAA3F] text-base sm:text-lg">5 un</span>
                     </div>
                     <input type="range" min="0" max="40" value="5" id="smokeRange" class="w-full accent-[#8DAA3F]">
                 </div>
@@ -85,7 +85,7 @@
                 <div class="h-full flex flex-col justify-between">
 
                     <div>
-                        <span class="text-xs sm:text-sm tracking-[3px] uppercase text-gray-400 font-semibold">
+                        <span class="text-xs sm:text-sm tracking-[3px] uppercase text-gray-400 font-normal">
                             Emissão Estimada
                         </span>
 
@@ -95,14 +95,14 @@
                                 82.5
                             </h2>
 
-                            <span class="pb-1 sm:pb-3 font-bold text-gray-500 text-sm sm:text-base">
+                            <span class="pb-1 sm:pb-3 font-normal text-gray-500 text-sm sm:text-base">
                                 kg CO₂ / mês
                             </span>
                         </div>
                     </div>
 
                     <div class="mt-8 sm:mt-10">
-                        <div class="flex justify-between mb-3 text-xs sm:text-sm font-bold text-gray-500">
+                        <div class="flex justify-between mb-3 text-xs sm:text-sm font-normal text-gray-500">
                             <span>Pureza do Ar</span>
                             <span id="statusText" class="text-[#8DAA3F]">ÓTIMA</span>
                         </div>
@@ -123,38 +123,84 @@
             <div class="bg-white rounded-2xl p-5 sm:p-6 border border-[#DADADA] card-shadow">
 
                 <h2 class="text-lg sm:text-xl font-black text-[#8DAA3F] mb-5 uppercase">
-                    Histórico de Testes
+                    Histórico de testes (arduino)
                 </h2>
 
-                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
-
-                    <div class="flex flex-col gap-1">
-                        <label class="text-xs font-bold text-gray-400 ml-1 uppercase">Local</label>
-                        <input id="localInput" type="text" placeholder="Ex: Casa, Trabalho"
-                            class="p-3 rounded-xl border border-gray-300 outline-none focus:border-[#8DAA3F] text-sm">
-                    </div>
-
-                    <div class="flex flex-col gap-1">
-                        <label class="text-xs font-bold text-gray-400 ml-1 uppercase">Horário</label>
-                        <input id="timeInput" type="time"
-                            class="p-3 rounded-xl border border-gray-300 outline-none focus:border-[#8DAA3F] text-sm">
-                    </div>
-
-                    <div class="flex flex-col gap-1">
-                        <label class="text-xs font-bold text-gray-400 ml-1 uppercase">Resultado</label>
-                        <input id="resultInput" type="text" placeholder="Resultado (kg CO₂)" readonly
-                            class="p-3 rounded-xl border border-gray-300 bg-gray-50 text-sm font-bold text-[#8DAA3F]">
-                    </div>
-
-                </div>
-
-                <button onclick="addHistory()"
-                    class="w-full sm:w-auto bg-[#8DAA3F] text-white px-6 py-3 rounded-xl font-bold hover:opacity-90 transition shadow-lg shadow-[#8DAA3F]/20 uppercase text-xs tracking-wider">
-                    Salvar Registro
-                </button>
-
-                <div class="mt-10">
+                <div class="mt-4">
                     <ul id="historyList" class="space-y-4">
+
+                        <!-- 173 → Moderado (101-300) → amarelo #f9a825 -->
+                        <li class="flex justify-between items-center bg-gray-50 p-4 rounded-xl border border-gray-100 fade-up">
+                            <div>
+                                <span class="font-bold text-gray-700 block">ar normal ( Quarto do Enzo Francisco)</span>
+                                <span class="text-xs text-gray-400 uppercase">Arduino Test</span>
+                            </div>
+                            <div class="flex items-center gap-2 font-black text-lg" style="color:#f9a825">
+                                173
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></svg>
+                            </div>
+                        </li>
+
+                        <!-- 250 → Moderado (101-300) → amarelo #f9a825 -->
+                        <li class="flex justify-between items-center bg-gray-50 p-4 rounded-xl border border-gray-100 fade-up">
+                            <div>
+                                <span class="font-bold text-gray-700 block">isqueiro de longe (30cm)</span>
+                                <span class="text-xs text-gray-400 uppercase">Arduino Test</span>
+                            </div>
+                            <div class="flex items-center gap-2 font-black text-lg" style="color:#f9a825">
+                                250
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></svg>
+                            </div>
+                        </li>
+
+                        <!-- 319 → Ruim (301-600) → laranja #ef6c00 -->
+                        <li class="flex justify-between items-center bg-gray-50 p-4 rounded-xl border border-gray-100 fade-up">
+                            <div>
+                                <span class="font-bold text-gray-700 block">isqueiro de perto (10cm)</span>
+                                <span class="text-xs text-gray-400 uppercase">Arduino Test</span>
+                            </div>
+                            <div class="flex items-center gap-2 font-black text-lg" style="color:#ef6c00">
+                                319
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></svg>
+                            </div>
+                        </li>
+
+                        <!-- 768 → Muito Poluído (601-800) → vermelho #c62828 -->
+                        <li class="flex justify-between items-center bg-gray-50 p-4 rounded-xl border border-gray-100 fade-up">
+                            <div>
+                                <span class="font-bold text-gray-700 block">isqueiro encostado</span>
+                                <span class="text-xs text-gray-400 uppercase">Arduino Test</span>
+                            </div>
+                            <div class="flex items-center gap-2 font-black text-lg" style="color:#c62828">
+                                768
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></svg>
+                            </div>
+                        </li>
+
+                        <!-- 823 → Perigoso (801-1000) → vermelho escuro #7b1a1a -->
+                        <li class="flex justify-between items-center bg-gray-50 p-4 rounded-xl border border-gray-100 fade-up">
+                            <div>
+                                <span class="font-bold text-gray-700 block">baforar</span>
+                                <span class="text-xs text-gray-400 uppercase">Arduino Test</span>
+                            </div>
+                            <div class="flex items-center gap-2 font-black text-lg" style="color:#7b1a1a">
+                                823
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></svg>
+                            </div>
+                        </li>
+
+                        <!-- 943 → Perigoso (801-1000) → vermelho escuro #7b1a1a -->
+                        <li class="flex justify-between items-center bg-gray-50 p-4 rounded-xl border border-gray-100 fade-up">
+                            <div>
+                                <span class="font-bold text-gray-700 block">fumo</span>
+                                <span class="text-xs text-gray-400 uppercase">Arduino Test</span>
+                            </div>
+                            <div class="flex items-center gap-2 font-black text-lg" style="color:#7b1a1a">
+                                943
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></svg>
+                            </div>
+                        </li>
+
                     </ul>
                 </div>
 

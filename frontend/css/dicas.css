@@ -13,6 +13,7 @@
 body {
     background: #f2f2f2;
     font-family: 'Epilogue', Arial, sans-serif;
+    font-weight: 400;
 }
 
 .header {
@@ -249,8 +250,8 @@ h2,
     color: #333333;
     font-size: 1rem; 
     line-height: 1.35;
-    font-weight: 500;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 20px;
 }
 
 .card ul {
@@ -325,6 +326,7 @@ h2,
     -webkit-backdrop-filter: blur(6px);
     z-index: 98;
     opacity: 0;
+    pointer-events: none;
     transition: opacity 0.3s ease;
 }
 
@@ -335,6 +337,7 @@ h2,
 
     .menu-overlay.active {
         opacity: 1;
+        pointer-events: auto;
     }
 
     body.menu-open {

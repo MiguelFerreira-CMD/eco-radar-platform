@@ -79,15 +79,10 @@ form {
     gap: 15px;
 }
 
-.input-group {
-    text-align: left;
-}
-
 .input-group label {
     display: block;
     margin-bottom: 6px;
     font-size: 0.9rem;
-    font-weight: 500;
 }
 
 .input-box {
@@ -128,7 +123,6 @@ button {
     background: #8CAA3F;
     color: white;
     font-size: 1rem;
-    font-weight: 600;
     cursor: pointer;
     transition: 0.3s ease;
 }
@@ -138,15 +132,9 @@ button:hover {
     transform: translateY(-2px);
 }
 
-.login-link {
-    margin-top: 20px;
-    font-size: 0.85rem;
-}
-
 .login-link a {
     color: #8CAA3F;
     text-decoration: underline;
-    font-weight: 600;
 }
 
 .login-link a:hover {

@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="icon" href="../assets/img/logoEcoradar.png" type="image/png">
     <link rel="stylesheet" href="../css/styles.css">
     <title>EcoRadar</title>
 </head>
 
 <body>
- 
+
     <header class="header">
         <nav class="nav">
             <div class="logo">
@@ -45,7 +45,70 @@
                     <strong>Conectando cidadãos à preservação ambiental.<br>
                         Transforme dados em ação e reduza seu impacto no planeta.</strong>
                 </p>
-                <button>Começar Agora</button>
+                <button><strong>Começar Agora</strong></button>
+            </div>
+        </section>
+
+        <section class="air-quality-section">
+            <div class="air-quality-container">
+                <div class="air-quality-header">
+                    <h2>Escala de Qualidade do Ar</h2>
+                    <p>Entenda o que os dados do sensor representam para a sua saúde.</p>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="air-table">
+                        <thead>
+                            <tr>
+                                <th>Índice</th>
+                                <th>Qualidade</th>
+                                <th>Situação & Recomendação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="level-good">
+                                <td>0 – 100</td>
+                                <td>
+                                    <span class="status-badge">Ar Puro</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2e7d32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-left:6px;"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></svg>
+                                </td>
+                                <td>Bom. Atividades normais para todos.</td>
+                            </tr>
+                            <tr class="level-moderate">
+                                <td>101 – 300</td>
+                                <td>
+                                    <span class="status-badge">Moderado</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f9a825" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-left:6px;"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></svg>
+                                </td>
+                                <td>Aceitável. Pessoas sensíveis devem evitar esforço prolongado.</td>
+                            </tr>
+                            <tr class="level-bad">
+                                <td>301 – 600</td>
+                                <td>
+                                    <span class="status-badge">Ruim</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ef6c00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-left:6px;"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></svg>
+                                </td>
+                                <td>Prejudicial. Evite exercícios externos e mantenha janelas fechadas.</td>
+                            </tr>
+                            <tr class="level-very-bad">
+                                <td>601 – 800</td>
+                                <td>
+                                    <span class="status-badge">Muito Poluído</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c62828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-left:6px;"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></svg>
+                                </td>
+                                <td>Alerta de saúde. Reduza exposição e use máscaras se necessário.</td>
+                            </tr>
+                            <tr class="level-danger">
+                                <td>801 – 1000</td>
+                                <td>
+                                    <span class="status-badge">Perigoso</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7b1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-left:6px;"><path d="M12.8 19.6A2 2 0 1 0 14 16H2"/><path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/><path d="M9.8 4.4A2 2 0 1 1 11 8H2"/></svg>
+                                </td>
+                                <td>Emergência. Evite qualquer exposição externa.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
 
@@ -99,7 +162,7 @@
             </div>
         </section>
     </main>
-    
+
     <script src="../js/navbar.js"></script>
 </body>
 

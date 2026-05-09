@@ -13,6 +13,7 @@ body {
     background: #f2f2f2;
     font-family: 'Epilogue', Arial, sans-serif;
     font-size: 16px;
+    font-weight: 400;
 }
 
 .header {
@@ -152,7 +153,6 @@ h2,
     padding: 6px 14px;
     border-radius: 50px;
     font-size: 0.8rem;
-    font-weight: 700;
     margin-bottom: 12px;
 }
 
@@ -208,7 +208,6 @@ h2,
     background: #8DAA3F;
     color: white;
     font-size: 1rem;
-    font-weight: 700;
     cursor: pointer;
     transition: 0.3s;
     white-space: nowrap;
@@ -223,7 +222,6 @@ h2,
 }
 
 .denuncia-box button:hover {
-    transform: scale(1.05);
     background: #7c9636;
 }
 
@@ -246,6 +244,7 @@ footer p {
     -webkit-backdrop-filter: blur(6px);
     z-index: 98;
     opacity: 0;
+    pointer-events: none;
     transition: opacity 0.3s ease;
 }
 
@@ -300,6 +299,7 @@ footer p {
 
     .menu-overlay.active {
         opacity: 1;
+        pointer-events: auto;
     }
 
     body.menu-open {

@@ -1,10 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Inicializar Ícones
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
     }
 
-    // Elementos
     const kmRange = document.getElementById("kmRange");
     const energyRange = document.getElementById("energyRange");
     const smokeRange = document.getElementById("smokeRange");
@@ -17,12 +15,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const barFill = document.getElementById("barFill");
     const statusText = document.getElementById("statusText");
 
-    const localInput = document.getElementById("localInput");
-    const timeInput = document.getElementById("timeInput");
-    const resultInput = document.getElementById("resultInput");
     const historyList = document.getElementById("historyList");
 
-    if (!kmRange) return; // Segurança
+    if (!kmRange) return;
 
     function calculate() {
         const km = Number(kmRange.value);
@@ -36,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const total = (km * 0.21) + (energy * 0.41) + (smoke * 1.8);
 
         co2Value.innerText = total.toFixed(1);
-        resultInput.value = total.toFixed(1) + " kg CO₂";
 
         let quality = 100 - (total / 5);
         if (quality < 5) quality = 5;
@@ -59,41 +53,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Listeners para os sliders
     kmRange.addEventListener("input", calculate);
     energyRange.addEventListener("input", calculate);
     smokeRange.addEventListener("input", calculate);
 
-    // Função de Histórico
-    window.addHistory = function () {
-        const local = localInput.value;
-        const time = timeInput.value;
-        const result = resultInput.value;
-
-        if (!local || !time) {
-            alert("Por favor, preencha o local e o horário.");
-            return;
-        }
-
-        const li = document.createElement("li");
-        li.className = "flex justify-between items-center bg-gray-50 p-4 rounded-xl border border-gray-100 fade-up";
-        li.innerHTML = `
-            <div>
-                <span class="font-bold text-gray-700 block">${local}</span>
-                <span class="text-xs text-gray-400 uppercase font-semibold">${time}</span>
-            </div>
-            <div class="text-[#8DAA3F] font-black text-lg">
-                ${result}
-            </div>
-        `;
-
-        historyList.prepend(li);
-
-        // Limpar inputs
-        localInput.value = "";
-        timeInput.value = "";
-    };
-
-    // Cálculo inicial
     calculate();
 });

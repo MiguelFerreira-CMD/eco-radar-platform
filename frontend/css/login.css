@@ -91,7 +91,6 @@ form {
     display: block;
     margin-bottom: 8px;
     font-size: 0.95rem;
-    font-weight: 500;
 }
 
 .input-box {
@@ -148,7 +147,6 @@ form {
 .register-link a {
     color: #8CAA3F;
     text-decoration: underline;
-    font-weight: 500;
 }
 
 .options a:hover,
@@ -164,7 +162,6 @@ button {
     background: #8CAA3F;
     color: white;
     font-size: 1rem;
-    font-weight: 600;
     cursor: pointer;
     transition: 0.3s ease;
 }
