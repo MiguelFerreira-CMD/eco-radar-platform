@@ -71,8 +71,7 @@ body {
 }
 
 .subtitle {
-    color:
-        rgba(255, 255, 255, 0.8);
+    color: white;
     font-size: 0.95rem;
     margin-bottom: 30px;
 }
@@ -102,22 +101,19 @@ form {
     padding: 15px;
     border: none;
     border-radius: 12px;
-    background:
-        rgba(255, 255, 255, 0.15);
-    color: white;
+    background: white;
+    color: #333;
     font-size: 1rem;
     outline: none;
     transition: 0.3s ease;
 }
 
 .input-box input::placeholder {
-    color:
-        rgba(255, 255, 255, 0.7);
+    color: #888;
 }
 
 .input-box input:focus {
-    background:
-        rgba(255, 255, 255, 0.22);
+    background: #f0f0f0;
 }
 
 .input-box i {
@@ -125,8 +121,7 @@ form {
     top: 50%;
     right: 15px;
     transform: translateY(-50%);
-    color:
-        rgba(255, 255, 255, 0.8);
+    color: #8CAA3F;
     cursor: pointer;
 }
 
@@ -167,8 +162,7 @@ button {
 }
 
 button:hover {
-    background: #8CAA3F;
-    transform: translateY(-2px);
+    background: #77942f;
 }
 
 .register-link {

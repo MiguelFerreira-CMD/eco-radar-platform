@@ -68,7 +68,7 @@ body{
 }
 
 .subtitle {
-    color: rgba(255, 255, 255, 0.8);
+    color: white;
     font-size: 0.9rem;
     margin-bottom: 25px;
 }
@@ -94,15 +94,19 @@ form {
     padding: 12px 15px;
     border: none;
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.15);
-    color: white;
+    background: white;
+    color: #333;
     font-size: 0.95rem;
     outline: none;
     transition: 0.3s ease;
 }
 
 .input-box input:focus {
-    background: rgba(255, 255, 255, 0.22);
+    background: #f0f0f0;
+}
+
+.input-box input::placeholder {
+    color: #888;
 }
 
 .input-box i {
@@ -110,7 +114,7 @@ form {
     top: 50%;
     right: 15px;
     transform: translateY(-50%);
-    color: rgba(255, 255, 255, 0.8);
+    color: #8CAA3F;
     cursor: pointer;
 }
 
@@ -128,8 +132,7 @@ button {
 }
 
 button:hover {
-    background: #9dba50;
-    transform: translateY(-2px);
+    background: #77942f;
 }
 
 .login-link {
