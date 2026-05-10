@@ -1,5 +1,13 @@
 node_modules/
-npm-debug.log
-.env
 dist/
 build/
+.env
+
+npm-debug.log*
+*.log
+
+.DS_Store
+.vscode/
+.idea/
+
+coverage/
