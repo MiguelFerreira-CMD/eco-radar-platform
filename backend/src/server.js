@@ -29,15 +29,33 @@ app.get("/api/health", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(FRONTEND_PATH, "pages/login.html"));
+  res.sendFile(path.join(FRONTEND_PATH, "pages/index.html"));
 });
 
-app.get("/home", (req, res) => {
-  res.sendFile(path.join(FRONTEND_PATH, "pages/index.html"));
+app.get("/login", (req, res) => {
+  res.sendFile(path.join(FRONTEND_PATH, "pages/login.html"));
 });
 
 app.get("/registro", (req, res) => {
   res.sendFile(path.join(FRONTEND_PATH, "pages/registro.html"));
+});
+
+app.get("/calculadora", (req, res) => {
+  res.sendFile(path.join(FRONTEND_PATH, "pages/calculadora.html"));
+});
+
+app.get("/dicas", (req, res) => {
+  res.sendFile(path.join(FRONTEND_PATH, "pages/dicas.html"));
+});
+
+app.get("/denuncia", (req, res) => {
+  res.sendFile(path.join(FRONTEND_PATH, "pages/denuncia.html"));
+});
+
+// Fallback for .html links if any remain
+app.get("/:page.html", (req, res) => {
+  const page = req.params.page;
+  res.sendFile(path.join(FRONTEND_PATH, `pages/${page}.html`));
 });
 
 const PORT = process.env.PORT || 5000;
