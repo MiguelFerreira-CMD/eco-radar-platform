@@ -35,7 +35,7 @@ form.addEventListener("submit", async (e) => {
 
         localStorage.setItem("token", data.token);
         localStorage.setItem("user", JSON.stringify(data.user));
-        window.location.href = "/pages/index.html";
+        window.location.href = "/";
 
     } catch (err) {
         console.error("Erro no login:", err);

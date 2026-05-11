@@ -16,114 +16,17 @@ body {
     font-weight: 400;
 }
 
-.header {
-    display: flex;
-    justify-content: center;
-    margin-top: 25px;
-}
-
-.nav {
-    width: 92%;
-    max-width: 1200px;
-    background: #ffffff;
-    border-radius: 50px;
-    padding: 18px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    color: #8DAA3F;
-    font-weight: bold;
-    font-size: 22px;
-    line-height: 1;
-    text-decoration: none;
-}
-
-.logo a {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    align-items: center;
-}
-
-.logo span {
-    position: relative;
-    top: 2px;
-}
-
-h1,
-h2,
-.logo {
-    font-family: 'Epilogue', sans-serif;
-    font-weight: 900;
-}
-
-.logo img {
-    width: 60px;
-}
-
-.menu {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    margin-right: 10%;
-    margin-left: 40px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    font-size: 17px;
-    transition: 0.3s;
-    position: relative;
-}
-
-.menu a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0%;
-    height: 2px;
-    background: #8DAA3F;
-    transition: 0.3s ease;
-}
-
-.menu a:hover {
-    color: #8DAA3F;
-}
-
-.menu a:hover::after {
-    width: 100%;
-}
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    z-index: 100;
-}
-
-.hamburger span {
-    width: 30px;
-    height: 4px;
-    background-color: #8DAA3F;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
 
 .container {
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 4%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+    }
 }
 
 .sobre {
@@ -194,6 +97,14 @@ h2,
     width: 100%;
 }
 
+@media (max-width: 768px) {
+    .denuncia-box {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
 .denuncia-box p {
     color: #fff;
     font-size: 1.1rem;
@@ -254,57 +165,6 @@ footer p {
         font-size: 14px;
     }
 
-    .nav {
-        padding: 12px 18px;
-    }
-
-    .logo img {
-        width: 45px;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-
-    .menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        width: 100%;
-        background: #ffffff;
-        padding: 15px 0;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-        margin: 0;
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-20px);
-        transition: all 0.3s ease;
-        z-index: 99;
-    }
-
-    .menu.active {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-    }
-
-    .menu-overlay {
-        display: block;
-    }
-
-    .menu-overlay.active {
-        opacity: 1;
-        pointer-events: auto;
-    }
-
-    body.menu-open {
-        overflow: hidden;
-    }
 
     .container {
         margin: 15px auto;

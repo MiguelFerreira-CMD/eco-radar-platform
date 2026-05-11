@@ -1,0 +1,95 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background: #ffffff;
+    width: 90%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #666;
+}
+
+.modal-icon {
+    margin-bottom: 20px;
+}
+
+.modal-content h2 {
+    color: #5d7f1f;
+    margin-bottom: 12px;
+    font-size: 24px;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 900;
+}
+
+.modal-content p {
+    color: #444;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.modal-btn-login {
+    background: #a4c639;
+    color: #111;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.modal-btn-login:hover {
+    background: #93b52f;
+    transform: translateY(-2px);
+}
+
+.modal-btn-register {
+    background: #f9f9f9;
+    color: #1d2d14;
+    padding: 14px;
+    border-radius: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid #e5e5e5;
+    transition: 0.3s;
+}
+
+.modal-btn-register:hover {
+    background: #eee;
+}

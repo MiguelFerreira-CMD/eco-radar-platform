@@ -7,16 +7,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="icon" href="../assets/img/logoEcoradar.png" type="image/png">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/modal.css">
     <title>EcoRadar</title>
 </head>
 
-<body>
+<body class="home-page">
 
     <header class="header">
         <nav class="nav">
             <div class="logo">
-                <a href="index.html"><img src="../assets/img/logoEcoradar.png" alt="Logo EcoRadar"></a>
-                <a href="index.html"><span>ECORADAR</span></a>
+                <a href="/"><span>ECORADAR</span></a>
             </div>
 
             <div class="hamburger" id="hamburger">
@@ -26,10 +26,10 @@
             </div>
 
             <ul class="menu" id="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="dicas.html">Dicas</a></li>
-                <li><a href="calculadora.html">Calculadora</a></li>
-                <li><a href="denuncia.html">Denúncias</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/dicas">Dicas</a></li>
+                <li><a href="/calculadora">Calculadora</a></li>
+                <li><a href="/denuncia">Denúncias</a></li>
             </ul>
         </nav>
     </header>
@@ -39,13 +39,13 @@
     <main>
         <section class="hero">
             <div class="hero-content">
-                <img src="../assets/img/logoEcoradar.png" alt="LogoHero" class="hero-logo" style="margin-left: 10%;">
+                <img src="../assets/img/logoEcoradar.png" alt="LogoHero" class="hero-logo">
                 <h1>EcoRadar</h1>
                 <p>
                     <strong>Conectando cidadãos à preservação ambiental.<br>
                         Transforme dados em ação e reduza seu impacto no planeta.</strong>
                 </p>
-                <button><strong>Começar Agora</strong></button>
+                <button id="cta-button"><strong>Começar Agora</strong></button>
             </div>
         </section>
 
@@ -148,7 +148,7 @@
         </section>
 
         <section class="cards">
-            <div class="card">
+            <div class="card" onclick="window.location.href='/dicas'">
                 <div class="card-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                         <path
@@ -161,7 +161,7 @@
                 <p class="pCard">Pequenas mudanças, grandes impactos.</p>
             </div>
 
-            <div class="card">
+            <div class="card" onclick="window.location.href='/denuncia'">
                 <div class="card-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -175,7 +175,7 @@
                 <p class="pCard">Fiscalize e proteja sua região.</p>
             </div>
 
-            <div class="card">
+            <div class="card" onclick="window.location.href='/calculadora'">
                 <div class="card-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -201,6 +201,11 @@
     <script src="../js/navbar.js"></script>
     <script src="../js/auth.js"></script>
     <script src="../js/logout.js"></script>
+    <script>
+        document.getElementById('cta-button').addEventListener('click', () => {
+            window.location.href = '/calculadora';
+        });
+    </script>
 </body>
 
 </html>
