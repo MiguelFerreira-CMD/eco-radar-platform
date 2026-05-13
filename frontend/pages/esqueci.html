@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/esqueci.css">
+    <link rel="icon" href="../assets/img/logoEcoradar.png" type="image/png">
+    <title>Recuperar Senha | EcoRadar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="background">
+        <div class="login-card">
+            <img src="../assets/img/logoEcoradar.png" alt="Logo" class="logo">
+            <h1>Recuperar Senha</h1>
+            <p class="subtitle">Insira seu e-mail para receber o link de recuperação</p>
+
+            <form id="forgotForm">
+                <div class="input-group">
+                    <label>E-mail</label>
+                    <div class="input-box">
+                        <input type="email" placeholder="seu@email.com" id="email" required>
+                    </div>
+                </div>
+
+                <button type="submit" id="btnSubmit">
+                    <span class="btn-text">Gerar Link</span>
+                    <div class="loader" id="loader"></div>
+                </button>
+            </form>
+
+            <div class="register-link">
+                <p>Lembrou a senha? <a href="/login">Voltar para Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/esqueci.js"></script>
+</body>
+
+</html>

@@ -1,11 +1,20 @@
 const form = document.getElementById("loginForm");
+const rememberCheckbox = document.getElementById("lembrar");
+const emailInput = document.getElementById("email");
 
-
+// Ao carregar a página, verifica se há um e-mail salvo
+window.addEventListener("DOMContentLoaded", () => {
+    const savedEmail = localStorage.getItem("rememberedEmail");
+    if (savedEmail) {
+        emailInput.value = savedEmail;
+        if (rememberCheckbox) rememberCheckbox.checked = true;
+    }
+});
 
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const email = document.getElementById("email").value.trim().toLowerCase();
+    const email = emailInput.value.trim().toLowerCase();
     const password = document.getElementById("senha").value;
     const submitBtn = form.querySelector('button[type="submit"]');
 
@@ -31,6 +40,13 @@ form.addEventListener("submit", async (e) => {
             submitBtn.innerText = originalText;
             submitBtn.disabled = false;
             return;
+        }
+
+        // Lógica do "Lembrar-me"
+        if (rememberCheckbox && rememberCheckbox.checked) {
+            localStorage.setItem("rememberedEmail", email);
+        } else {
+            localStorage.removeItem("rememberedEmail");
         }
 
         localStorage.setItem("token", data.token);

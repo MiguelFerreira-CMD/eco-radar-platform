@@ -75,6 +75,23 @@ Entre suas funções estão:
 POST /login
 POST /register
 
+---
+
+## passwordController.js
+
+Responsável por gerenciar toda a lógica de **recuperação e redefinição de senha**.
+
+Entre suas funções estão:
+
+- envio de um link para a página de redefinição de senha
+- redireciona para a página de redefinição de senha
+- validação do link de redefinição
+- atualização da senha no banco de dados
+
+**Exemplos de endpoints relacionados:**
+
+POST /esqueci-senha
+POST /reset-senha/:token
 
 ---
 
@@ -150,6 +167,17 @@ Rotas de autenticação
 
 * POST /login
 * POST /register
+
+---
+
+## routes/passwordRoutes.js
+
+Rotas de recuperação e redefinição de senha.
+
+*Ex:*
+
+* POST /esqueci-senha
+* POST /reset-senha/:token
 
 ---
 

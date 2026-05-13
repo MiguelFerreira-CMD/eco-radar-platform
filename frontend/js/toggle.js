@@ -17,3 +17,5 @@ function setupPasswordToggle(toggleId, inputId) {
 
 setupPasswordToggle('toggleSenha', 'senha');
 setupPasswordToggle('toggleConfirmar', 'confirmarSenha');
+setupPasswordToggle('togglePassword', 'password');
+setupPasswordToggle('toggleConfirmPassword', 'confirmPassword');

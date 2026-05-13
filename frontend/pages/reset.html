@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="icon" href="../assets/img/logoEcoradar.png" type="image/png">
+    <title>Redefinir Senha | EcoRadar</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="background">
+        <div class="login-card">
+            <img src="../assets/img/logoEcoradar.png" alt="Logo" class="logo">
+            <h1>Redefinir Senha</h1>
+            <p class="subtitle">Escolha sua nova senha de acesso</p>
+
+            <form id="resetForm">
+                <div class="input-group">
+                    <label>Nova Senha</label>
+                    <div class="input-box">
+                        <input type="password" placeholder="Digite a nova senha" id="password" required>
+                        <i class="fa-solid fa-eye" id="togglePassword"></i>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label>Confirmar Senha</label>
+                    <div class="input-box">
+                        <input type="password" placeholder="Confirme a nova senha" id="confirmPassword" required>
+                        <i class="fa-solid fa-eye" id="toggleConfirmPassword"></i>
+                    </div>
+                </div>
+
+                <div id="message" class="feedback-message"></div>
+
+                <button type="submit" id="btnSubmit">
+                    <span class="btn-text">Redefinir Senha</span>
+                    <div class="loader" id="loader"></div>
+                </button>
+            </form>
+
+            <div class="register-link">
+                <p>Não quer mudar? <a href="/login">Voltar para Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/toggle.js"></script>
+    <script src="../js/reset.js"></script>
+</body>
+
+</html>

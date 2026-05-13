@@ -73,6 +73,37 @@ Após o cadastro, o usuário poderá acessar as **funcionalidades da plataforma*
 
 ---
 
+## esqueci.html
+
+Página de **recuperação de senha**.
+
+Permite que usuários que esqueceram sua senha solicitem um **link de redefinição** via URL.
+
+**Dados normalmente solicitados:**
+
+- email  
+
+Após o envio, o usuário é redirecionado para a página **reset-senha** para recuperar o acesso à conta na plataforma **EcoRadar**.
+
+---
+
+## reset.html
+
+Página de **redefinição de senha**.
+
+Acessada a partir do link que redireciona para a página **reset-senha** após o envio do email na etapa de recuperação.
+
+Permite que o usuário defina uma **nova senha** para sua conta na plataforma **EcoRadar**.
+
+**Dados normalmente solicitados:**
+
+- nova senha  
+- confirmação da nova senha  
+
+Após a redefinição, o usuário poderá fazer login com as **novas credenciais**.
+
+---
+
 ## dicas.html
 
 Página dedicada a **dicas de sustentabilidade e conscientização ambiental**.
@@ -166,6 +197,32 @@ Responsável por:
 
 ---
 
+## css/esqueci.css
+
+Arquivo de estilos da **página de recuperação de senha (esqueci.html)**.
+
+Responsável por:
+
+- centralização do formulário de recuperação
+- estilização do campo de input de email
+- botão de envio do link
+- feedback visual (confirmação de envio e erros)
+
+---
+
+## css/reset.css
+
+Arquivo de estilos da **página de redefinição de senha (reset.html)**.
+
+Responsável por:
+
+- centralização do formulário de redefinição
+- estilização dos campos de nova senha e confirmação
+- botão de salvar nova senha
+- feedback visual (erros de validação e sucesso na redefinição)
+
+---
+
 ## css/dicas.css
 
 Arquivo de estilos da **página de dicas (dicas.html)**.
@@ -228,18 +285,6 @@ Esses scripts:
 - Calcular emissão  
 - Mostrar resultado  
 - Enviar pro backend  
-
----
-
-## js/app.js
-
-Controle geral da aplicação
-
-**Faz:**
-
-- Verifica se usuário está logado  
-- Bloqueia acesso sem login  
-- Controla o que aparece na tela  
 
 ---
 
@@ -306,6 +351,46 @@ Arquivo responsável por controlar **alternância de elementos da interface (tog
 - melhorar a interação do usuário com a interface  
 
 ---
+
+# frontend/auth.js
+
+Arquivo responsável pela lógica central de autenticação do sistema.
+
+## Funções principais
+
+- Gerenciar o estado de autenticação do usuário na aplicação
+- Armazenar e recuperar tokens de acesso (`localStorage` / `sessionStorage`)
+- Validar se o usuário está autenticado antes de acessar rotas protegidas
+- Redirecionar automaticamente para login caso a sessão expire
+- Realizar logout, limpando credenciais e encerrando a sessão ativa
+
+---
+
+# frontend/esqueci.js
+
+Arquivo responsável pela lógica da aba de "Esqueceu sua senha?".
+
+## Funções principais
+
+- Capturar o e-mail informado pelo usuário no formulário
+- Validar se o e-mail possui formato correto antes do envio
+- Enviar requisição para a API solicitando o link de recuperação de senha pela URL
+- Exibir mensagem de sucesso ou erro conforme resposta da API
+- Desabilitar o botão de envio durante o processamento para evitar múltiplos cliques
+
+---    
+
+# frontend/reset.js
+
+Arquivo responsável pela lógica da aba de redefinição de senha.
+
+## Funções principais
+
+- Capturar a nova senha e a confirmação de senha informadas pelo usuário
+- Validar se as senhas coincidem e atendem aos critérios mínimos de segurança
+- Extrair o token de redefinição presente na URL da página
+- Enviar requisição para a API com o token e a nova senha definida
+- Redirecionar o usuário para o login após a redefinição bem-sucedida
 
 # Assets
 

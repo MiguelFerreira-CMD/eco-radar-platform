@@ -1,1 +1,35 @@
-    
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+
+// LCD address usually 0x27 or 0x3F
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+const int mq135Pin = A2;
+
+void setup() {
+
+  lcd.init();           
+  lcd.backlight();      
+
+  Serial.begin(9600);
+
+  lcd.setCursor(0,0);
+  lcd.print("MQ135 Sensor");
+  delay(2000);
+  lcd.clear();
+}
+
+void loop() {
+
+  int sensorValue = analogRead(mq135Pin); 
+
+  Serial.println(sensorValue);
+
+  lcd.setCursor(0,0);
+  lcd.print("Sensor Value:");
+
+  lcd.setCursor(0,1);
+  lcd.print(sensorValue);
+
+  delay(1000);
+}
