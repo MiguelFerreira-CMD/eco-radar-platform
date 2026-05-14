@@ -65,7 +65,7 @@ form.addEventListener("submit", async (e) => {
     } catch (err) {
         console.error("Erro no login:", err);
 
-        alert("Erro ao conectar com o servidor.");
+        alert("Servidor iniciando. Aguarde alguns segundos e tente novamente.");
 
         submitBtn.innerText = "Entrar";
         submitBtn.disabled = false;
