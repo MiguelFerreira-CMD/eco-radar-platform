@@ -28,8 +28,11 @@ form.addEventListener("submit", async (e) => {
     try {
         const originalText = submitBtn.innerText;
 
-        submitBtn.innerText = "Carregando...";
+        submitBtn.innerText = "Entrando...";
         submitBtn.disabled = true;
+
+        // Acorda o servidor Render antes do login
+        await fetch("/api/health");
 
         const response = await fetch("/api/auth/login", {
             method: "POST",
@@ -42,7 +45,7 @@ form.addEventListener("submit", async (e) => {
         const data = await response.json();
 
         if (!response.ok) {
-            alert(data.message || "Erro no login");
+            alert(data.message || "Erro ao fazer login.");
 
             submitBtn.innerText = originalText;
             submitBtn.disabled = false;
@@ -57,15 +60,19 @@ form.addEventListener("submit", async (e) => {
             localStorage.removeItem("rememberedEmail");
         }
 
+        // Salva autenticação
         localStorage.setItem("token", data.token);
         localStorage.setItem("user", JSON.stringify(data.user));
 
+        submitBtn.innerText = "Sucesso!";
+
+        // Redireciona
         window.location.href = "/";
 
     } catch (err) {
         console.error("Erro no login:", err);
 
-        alert("Servidor iniciando. Aguarde alguns segundos e tente novamente.");
+        alert("Servidor iniciando ou indisponível. Aguarde alguns segundos e tente novamente.");
 
         submitBtn.innerText = "Entrar";
         submitBtn.disabled = false;
