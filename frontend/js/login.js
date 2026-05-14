@@ -5,9 +5,13 @@ const emailInput = document.getElementById("email");
 // Ao carregar a página, verifica se há um e-mail salvo
 window.addEventListener("DOMContentLoaded", () => {
     const savedEmail = localStorage.getItem("rememberedEmail");
+
     if (savedEmail) {
         emailInput.value = savedEmail;
-        if (rememberCheckbox) rememberCheckbox.checked = true;
+
+        if (rememberCheckbox) {
+            rememberCheckbox.checked = true;
+        }
     }
 });
 
@@ -16,16 +20,18 @@ form.addEventListener("submit", async (e) => {
 
     const email = emailInput.value.trim().toLowerCase();
     const password = document.getElementById("senha").value;
+
     const submitBtn = form.querySelector('button[type="submit"]');
 
     console.log("Tentando login para:", email);
 
     try {
         const originalText = submitBtn.innerText;
+
         submitBtn.innerText = "Carregando...";
         submitBtn.disabled = true;
 
-        const response = await fetch("http://192.168.0.6:5000/api/auth/login", {
+        const response = await fetch("/api/auth/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -37,8 +43,10 @@ form.addEventListener("submit", async (e) => {
 
         if (!response.ok) {
             alert(data.message || "Erro no login");
+
             submitBtn.innerText = originalText;
             submitBtn.disabled = false;
+
             return;
         }
 
@@ -51,11 +59,14 @@ form.addEventListener("submit", async (e) => {
 
         localStorage.setItem("token", data.token);
         localStorage.setItem("user", JSON.stringify(data.user));
+
         window.location.href = "/";
 
     } catch (err) {
         console.error("Erro no login:", err);
+
         alert("Erro ao conectar com o servidor.");
+
         submitBtn.innerText = "Entrar";
         submitBtn.disabled = false;
     }
