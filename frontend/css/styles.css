@@ -171,8 +171,8 @@ h2,
 }
 
 .btn-register:hover {
-    background: #93b52f;
-    transform: translateY(-2px);
+    background: #a4c639;
+    transform: none;
 }
 
 .btn-logout {
@@ -268,8 +268,8 @@ h2,
 }
 
 .hero button:hover {
-    background: #93b52f;
-    transform: translateY(-2px);
+    background: #a4c639;
+    transform: none;
 }
 
 /* =========================
@@ -436,6 +436,15 @@ h2,
     background-color: #7b1a1a;
 }
 
+.status-dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
 /* =========================
    OVERLAY
 ========================= */
@@ -479,6 +488,10 @@ h2,
         justify-self: end;
     }
 
+    .menu a::after {
+        display: none;
+    }
+
     .menu {
         position: absolute;
         top: 100%;
@@ -498,6 +511,8 @@ h2,
         transition: 0.3s ease;
 
         z-index: 999;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
     }
 
     .menu.active {
@@ -512,9 +527,7 @@ h2,
         width: 100%;
         gap: 15px;
         align-items: center;
-        border-top: 1px solid #eee;
-        padding-top: 20px;
-        margin-top: 10px;
+        padding-top: 10px;
     }
 
     .mobile-auth a {
@@ -627,4 +640,3 @@ h2,
         font-size: 14px;
     }
 }
-

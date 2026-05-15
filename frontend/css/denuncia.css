@@ -112,7 +112,8 @@ body {
     flex: 1;
 }
 
-.denuncia-box button {
+.denuncia-box .btn-denuncia {
+    display: inline-block;
     padding: 16px 32px;
     border: none;
     border-radius: 12px;
@@ -122,17 +123,11 @@ body {
     cursor: pointer;
     transition: 0.3s;
     white-space: nowrap;
-}
-
-.denuncia-box button a {
     text-decoration: none;
-    color: inherit;
-    display: block;
-    width: 100%;
-    height: 100%;
+    text-align: center;
 }
 
-.denuncia-box button:hover {
+.denuncia-box .btn-denuncia:hover {
     background: #7c9636;
 }
 
@@ -198,7 +193,7 @@ footer p {
         font-size: 0.95rem;
     }
 
-    .denuncia-box button {
+    .denuncia-box .btn-denuncia {
         width: 100%;
     }
 }

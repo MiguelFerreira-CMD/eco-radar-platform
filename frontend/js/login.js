@@ -21,6 +21,17 @@ form.addEventListener("submit", async (e) => {
     const email = emailInput.value.trim().toLowerCase();
     const password = document.getElementById("senha").value;
 
+    if (password.length < 8) {
+        alert("A senha deve ter no mínimo 8 caracteres.");
+        return;
+    }
+
+    if (/\s/.test(password)) {
+        alert("A senha não pode conter espaços.");
+        return;
+    }
+
+
     const submitBtn = form.querySelector('button[type="submit"]');
 
     console.log("Tentando login para:", email);

@@ -14,6 +14,52 @@ form.addEventListener("submit", async (e) => {
         return;
     }
 
+    if (/\s/.test(password)) {
+        alert("A senha não pode conter espaços.");
+        return;
+    }
+
+    if (password.length < 8) {
+        alert("A senha deve ter no mínimo 8 caracteres.");
+        return;
+    }
+
+    if (!/[A-Z]/.test(password)) {
+        alert("A senha deve conter pelo menos 1 letra maiúscula.");
+        return;
+    }
+
+
+    if (!/[0-9]/.test(password)) {
+        alert("A senha deve conter pelo menos 1 número.");
+        return;
+    }
+
+    if (!/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?`~]/.test(password)) {
+        alert("A senha deve conter pelo menos 1 caractere especial (ex: !@#$%&*).");
+        return;
+    }
+
+    const sequenciasF = ["123456", "abcdef", "qwerty", "654321", "fedcba"];
+    const senhaLower = password.toLowerCase();
+    for (const seq of sequenciasF) {
+        if (senhaLower.includes(seq)) {
+            alert("A senha contém uma sequência fraca (ex: 123456, abcdef, qwerty). Escolha uma senha mais forte.");
+            return;
+        }
+    }
+
+    const senhasComuns = [
+        "admin123", "senha123", "miguel123", "password", "12345678",
+        "admin1234", "senha1234", "qwerty123", "abc12345"
+    ];
+    if (senhasComuns.includes(senhaLower)) {
+        alert("Essa senha é muito comum. Escolha uma senha mais forte.");
+        return;
+    }
+
+
+
     console.log("Tentando criar conta para:", email);
 
     try {
@@ -38,7 +84,7 @@ form.addEventListener("submit", async (e) => {
             return;
         }
 
-        window.location.href = "/";
+        window.location.href = "/login";
 
     } catch (err) {
         console.error("Erro no registro:", err);

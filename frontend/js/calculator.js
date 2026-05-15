@@ -7,11 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const energyRange = document.getElementById("energyRange");
     const smokeRange = document.getElementById("smokeRange");
 
-    const kmValue = document.getElementById("kmValue");
-    const energyValue = document.getElementById("energyValue");
-    const smokeValue = document.getElementById("smokeValue");
-
     const co2Value = document.getElementById("co2Value");
+
     const barFill = document.getElementById("barFill");
     const statusText = document.getElementById("statusText");
 
@@ -20,13 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if (!kmRange) return;
 
     function calculate() {
-        const km = Number(kmRange.value);
-        const energy = Number(energyRange.value);
-        const smoke = Number(smokeRange.value);
-
-        kmValue.innerText = km + " km";
-        energyValue.innerText = energy + " kWh";
-        smokeValue.innerText = smoke + " un";
+        const km = Number(kmRange.value) || 0;
+        const energy = Number(energyRange.value) || 0;
+        const smoke = Number(smokeRange.value) || 0;
 
         const total = (km * 0.21) + (energy * 0.41) + (smoke * 1.8);
 
@@ -39,18 +32,19 @@ document.addEventListener("DOMContentLoaded", function () {
         barFill.style.width = quality + "%";
 
         if (total <= 90) {
-            statusText.innerText = "ÓTIMA";
+            statusText.innerText = "AMBIENTE CONTROLADO";
             statusText.style.color = "#8DAA3F";
             barFill.style.background = "#8DAA3F";
         } else if (total <= 180) {
-            statusText.innerText = "MODERADA";
+            statusText.innerText = "AMBIENTE MODERADO";
             statusText.style.color = "#c7a600";
             barFill.style.background = "#c7a600";
         } else {
-            statusText.innerText = "ALTA";
+            statusText.innerText = "ESCASSA";
             statusText.style.color = "#cc4b37";
             barFill.style.background = "#cc4b37";
         }
+
     }
 
     kmRange.addEventListener("input", calculate);
@@ -58,4 +52,5 @@ document.addEventListener("DOMContentLoaded", function () {
     smokeRange.addEventListener("input", calculate);
 
     calculate();
+
 });

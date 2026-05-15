@@ -29,7 +29,7 @@
             </div>
 
             <ul class="menu" id="menu">
-                <li><a href="/">Home</a></li>
+                <li><a href="/">Inicio</a></li>
                 <li><a href="/dicas">Dicas</a></li>
                 <li><a href="/calculadora">Calculadora</a></li>
                 <li><a href="/denuncia">Denúncias</a></li>
@@ -47,7 +47,7 @@
             </h1>
 
             <p class="mt-3 text-gray-500 text-sm sm:text-base max-w-md">
-                Ajuste os dados abaixo para simular sua pegada ambiental mensal e descobrir como você pode ajudar o
+                Ajuste os dados abaixo para simular sua emissão estimada mensal e descobrir como você pode ajudar o
                 planeta.
             </p>
         </section>
@@ -59,25 +59,25 @@
                 <div class="mb-6 sm:mb-8">
                     <div class="flex justify-between items-center mb-3">
                         <h3 class="text-sm sm:text-base">Transporte (km/mês)</h3>
-                        <span id="kmValue" class="text-[#8DAA3F] text-base sm:text-lg">100 km</span>
                     </div>
-                    <input type="range" min="0" max="1000" value="100" id="kmRange" class="w-full accent-[#8DAA3F]">
+                    <input type="number" min="0" max="1000" value="0" id="kmRange"
+                        class="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#8DAA3F] focus:border-transparent transition-all">
                 </div>
 
                 <div class="mb-6 sm:mb-8">
                     <div class="flex justify-between items-center mb-3">
                         <h3 class="text-sm sm:text-base">Energia (kWh/mês)</h3>
-                        <span id="energyValue" class="text-[#8DAA3F] text-base sm:text-lg">150 kWh</span>
                     </div>
-                    <input type="range" min="0" max="1000" value="150" id="energyRange" class="w-full accent-[#8DAA3F]">
+                    <input type="number" min="0" max="1000" value="0" id="energyRange"
+                        class="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#8DAA3F] focus:border-transparent transition-all">
                 </div>
 
                 <div>
                     <div class="flex justify-between items-center mb-3">
                         <h3 class="text-sm sm:text-base">Fumaça (cigarros/dia)</h3>
-                        <span id="smokeValue" class="text-[#8DAA3F] text-base sm:text-lg">5 un</span>
                     </div>
-                    <input type="range" min="0" max="40" value="5" id="smokeRange" class="w-full accent-[#8DAA3F]">
+                    <input type="number" min="0" max="40" value="0" id="smokeRange"
+                        class="w-full p-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#8DAA3F] focus:border-transparent transition-all">
                 </div>
 
             </div>
@@ -121,129 +121,84 @@
 
         </section>
 
-        <section class="mt-6 sm:mt-8 fade-up">
-            <div class="bg-white rounded-2xl p-5 sm:p-6 border border-[#DADADA] card-shadow">
-
-                <h2 class="text-lg sm:text-xl font-black text-[#8DAA3F] mb-5 uppercase">
-                    Histórico de testes (arduino)
-                </h2>
-
-                <div class="mt-4">
-                    <ul id="historyList" class="space-y-4">
-                        <li
-                            class="flex justify-between items-center bg-gray-50 p-4 rounded-xl border border-gray-100 fade-up">
-                            <div>
-                                <span class="font-bold text-gray-700 block">ar normal ( Quarto do Enzo Francisco)</span>
-                                <span class="text-xs text-gray-400 uppercase">Arduino Test</span>
-                            </div>
-                            <div class="flex items-center gap-2 font-black text-lg" style="color:#f9a825">
-                                173
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M12.8 19.6A2 2 0 1 0 14 16H2" />
-                                    <path d="M17.5 8a2.5 2.5 0 1 1 2 4H2" />
-                                    <path d="M9.8 4.4A2 2 0 1 1 11 8H2" />
-                                </svg>
-                            </div>
-                        </li>
-
-                        <li
-                            class="flex justify-between items-center bg-gray-50 p-4 rounded-xl border border-gray-100 fade-up">
-                            <div>
-                                <span class="font-bold text-gray-700 block">isqueiro de longe (30cm)</span>
-                                <span class="text-xs text-gray-400 uppercase">Arduino Test</span>
-                            </div>
-                            <div class="flex items-center gap-2 font-black text-lg" style="color:#f9a825">
-                                250
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M12.8 19.6A2 2 0 1 0 14 16H2" />
-                                    <path d="M17.5 8a2.5 2.5 0 1 1 2 4H2" />
-                                    <path d="M9.8 4.4A2 2 0 1 1 11 8H2" />
-                                </svg>
-                            </div>
-                        </li>
-
-                        <li
-                            class="flex justify-between items-center bg-gray-50 p-4 rounded-xl border border-gray-100 fade-up">
-                            <div>
-                                <span class="font-bold text-gray-700 block">isqueiro de perto (10cm)</span>
-                                <span class="text-xs text-gray-400 uppercase">Arduino Test</span>
-                            </div>
-                            <div class="flex items-center gap-2 font-black text-lg" style="color:#ef6c00">
-                                319
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M12.8 19.6A2 2 0 1 0 14 16H2" />
-                                    <path d="M17.5 8a2.5 2.5 0 1 1 2 4H2" />
-                                    <path d="M9.8 4.4A2 2 0 1 1 11 8H2" />
-                                </svg>
-                            </div>
-                        </li>
-
-                        <li
-                            class="flex justify-between items-center bg-gray-50 p-4 rounded-xl border border-gray-100 fade-up">
-                            <div>
-                                <span class="font-bold text-gray-700 block">isqueiro encostado</span>
-                                <span class="text-xs text-gray-400 uppercase">Arduino Test</span>
-                            </div>
-                            <div class="flex items-center gap-2 font-black text-lg" style="color:#c62828">
-                                768
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M12.8 19.6A2 2 0 1 0 14 16H2" />
-                                    <path d="M17.5 8a2.5 2.5 0 1 1 2 4H2" />
-                                    <path d="M9.8 4.4A2 2 0 1 1 11 8H2" />
-                                </svg>
-                            </div>
-                        </li>
-
-                        <li
-                            class="flex justify-between items-center bg-gray-50 p-4 rounded-xl border border-gray-100 fade-up">
-                            <div>
-                                <span class="font-bold text-gray-700 block">baforar</span>
-                                <span class="text-xs text-gray-400 uppercase">Arduino Test</span>
-                            </div>
-                            <div class="flex items-center gap-2 font-black text-lg" style="color:#7b1a1a">
-                                823
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M12.8 19.6A2 2 0 1 0 14 16H2" />
-                                    <path d="M17.5 8a2.5 2.5 0 1 1 2 4H2" />
-                                    <path d="M9.8 4.4A2 2 0 1 1 11 8H2" />
-                                </svg>
-                            </div>
-                        </li>
-                        <li
-                            class="flex justify-between items-center bg-gray-50 p-4 rounded-xl border border-gray-100 fade-up">
-                            <div>
-                                <span class="font-bold text-gray-700 block">fumo</span>
-                                <span class="text-xs text-gray-400 uppercase">Arduino Test</span>
-                            </div>
-                            <div class="flex items-center gap-2 font-black text-lg" style="color:#7b1a1a">
-                                943
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M12.8 19.6A2 2 0 1 0 14 16H2" />
-                                    <path d="M17.5 8a2.5 2.5 0 1 1 2 4H2" />
-                                    <path d="M9.8 4.4A2 2 0 1 1 11 8H2" />
-                                </svg>
-                            </div>
-                        </li>
-
-                    </ul>
-                </div>
-
-            </div>
-        </section>
-
     </main>
+
+    <div class="test-history-container">
+        <h2 style="text-align: center;" class="history-title">Histórico de Testes(Arduino)</h2>
+        <p style="text-align: center;" class="history-subtitle">Estudo do comportamento do sensor em diferentes condições climáticas e ambientes, buscando entender como ele reage em cada situação.</p>
+
+        <div class="table-responsive">
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Horário (Início/Fim)</th>
+                        <th>Local / Tipo de Ambiente</th>
+                        <th>Condição Térmica</th>
+                        <th>Estímulo Aplicado</th>
+                        <th>Índice Bruto</th>
+                        <th>Qualidade do Ar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="level-moderate">
+                        <td>10/05/2026</td>
+                        <td>13:15 - 13:20</td>
+                        <td>Quarto do Enzo <br><small>Ambiente Fechado</small></td>
+                        <td><span class="badge badge-hot">Muito Quente (31°C)</span></td>
+                        <td>Ar normal ambiente</td>
+                        <td class="index-value text-moderado">173</td>
+                        <td><span class="status-dot" style="background-color:#f9a825"></span> Moderado</td>
+                    </tr>
+                    <tr class="level-moderate">
+                        <td>11/05/2026</td>
+                        <td>13:40 - 13:45</td>
+                        <td>Sacada do Quarto <br><small>Ao Ar Livre</small></td>
+                        <td><span class="badge badge-hot">Muito Quente (32°C)</span></td>
+                        <td>Isqueiro de longe (30cm)</td>
+                        <td class="index-value text-moderado">250</td>
+                        <td><span class="status-dot" style="background-color:#f9a825"></span> Moderado</td>
+                    </tr>
+                    <tr class="level-bad">
+                        <td>12/05/2026</td>
+                        <td>14:05 - 14:10</td>
+                        <td>Sacada do Quarto <br><small>Ao Ar Livre</small></td>
+                        <td><span class="badge badge-hot">Muito Quente (32°C)</span></td>
+                        <td>Isqueiro de perto (10cm)</td>
+                        <td class="index-value text-ruim">319</td>
+                        <td><span class="status-dot" style="background-color:#ef6c00"></span> Ruim</td>
+                    </tr>
+                    <tr class="level-very-bad">
+                        <td>13/05/2026</td>
+                        <td>06:10 - 06:15</td>
+                        <td>Quintal de Casa <br><small>Ao Ar Livre</small></td>
+                        <td><span class="badge badge-cold">Muito Frio (11°C)</span></td>
+                        <td>Isqueiro encostado</td>
+                        <td class="index-value text-critico">768</td>
+                        <td><span class="status-dot" style="background-color:#c62828"></span> Muito Poluído</td>
+                    </tr>
+                    <tr class="level-danger">
+                        <td>14/05/2026</td>
+                        <td>06:45 - 06:50</td>
+                        <td>Quintal de Casa <br><small>Ao Ar Livre</small></td>
+                        <td><span class="badge badge-cold">Muito Frio (11°C)</span></td>
+                        <td>Fumar direto no sensor</td>
+                        <td class="index-value text-perigoso">823</td>
+                        <td><span class="status-dot" style="background-color:#7b1a1a"></span> Perigoso</td>
+                    </tr>
+                    <tr class="level-danger">
+                        <td>15/05/2026</td>
+                        <td>07:10 - 07:15</td>
+                        <td>Garagem Coberta <br><small>Ambiente Semicorberto</small></td>
+                        <td><span class="badge badge-cold">Muito Frio (13°C)</span></td>
+                        <td>Fumaça direta</td>
+                        <td class="index-value text-perigoso">943</td>
+                        <td><span class="status-dot" style="background-color:#7b1a1a"></span> Perigoso</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 
     <script src="../js/calculator.js"></script>
     <script src="../js/navbar.js"></script>

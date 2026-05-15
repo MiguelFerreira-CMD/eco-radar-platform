@@ -15,8 +15,6 @@ body {
     font-weight: 400;
 }
 
-
-
 footer {
     text-align: center;
     margin: 50px 0;
@@ -27,4 +25,175 @@ footer p {
     margin-top: 6.5%;
 }
 
-    
+/* ========================= */
+/* TABELA HISTÓRICO AVANÇADO */
+/* ========================= */
+
+.test-history-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    margin: 30px auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 92%;
+    max-width: 1400px;
+    box-sizing: border-box;
+}
+
+.history-title {
+    color: #5c7a30;
+    font-size: 24px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.history-subtitle {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid #eef2f5;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 14px;
+    min-width: 850px;
+}
+
+.history-table th {
+    background-color: #f8fafc;
+    color: #4a5568;
+    padding: 16px;
+    font-weight: 600;
+    border-bottom: 2px solid #edf2f7;
+    white-space: nowrap;
+}
+
+.history-table td {
+    padding: 16px;
+    color: #2d3748;
+    border-bottom: 1px solid #edf2f7;
+    vertical-align: middle;
+}
+
+.history-table tbody tr:hover {
+    background-color: #fafff5;
+}
+
+/* Badges de Clima */
+.badge {
+    padding: 6px 12px;
+    border-radius: 50px;
+    font-size: 12px;
+    font-weight: 600;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.badge-hot {
+    background-color: #ffebe6;
+    color: #ff521d;
+}
+
+.badge-cold {
+    background-color: #e3f2fd;
+    color: #0d47a1;
+}
+
+/* Cores dos Índices */
+.index-value {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.text-moderado {
+    color: #f0a500;
+}
+
+.text-ruim {
+    color: #ff6f00;
+}
+
+.text-critico {
+    color: #d32f2f;
+}
+
+.text-perigoso {
+    color: #7b1fa2;
+}
+
+/* Indicadores de Status (Bolinhas) */
+.status-dot {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.dot-moderado {
+    background-color: #f0a500;
+}
+
+.dot-ruim {
+    background-color: #ff6f00;
+}
+
+.dot-critico {
+    background-color: #d32f2f;
+}
+
+.dot-perigoso {
+    background-color: #7b1fa2;
+}
+
+/* --- RESPONSIVIDADE (MEDIA QUERIES) --- */
+
+/* Ajustes para Tablets (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .test-history-container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .history-title {
+        font-size: 20px;
+    }
+
+    .history-subtitle {
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+
+    .history-table th,
+    .history-table td {
+        padding: 12px;
+    }
+}
+
+/* Ajustes para Celulares (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .test-history-container {
+        padding: 15px;
+        border-radius: 12px;
+    }
+
+    .history-title {
+        font-size: 18px;
+    }
+
+    .table-responsive {
+        border-style: dashed;
+        border-color: #cbd5e1;
+    }
+}
