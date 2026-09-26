@@ -79,14 +79,6 @@ Após o cálculo, o sistema:
 
 ---
 
-## 📊 Histórico de Resultados
-
-- Cada usuário pode visualizar seus cálculos anteriores  
-- Armazenamento local dos dados  
-- Permite acompanhar evolução ao longo do tempo  
-
----
-
 ## 🌱 Conteúdo Educativo
 
 O site também conta com informações sobre:
